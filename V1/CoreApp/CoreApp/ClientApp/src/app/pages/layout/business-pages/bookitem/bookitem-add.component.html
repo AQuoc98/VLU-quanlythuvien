@@ -1,0 +1,206 @@
+<div class="page-header row no-gutters py-4" *ngIf="!isEdit">
+  <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+    <h3 class="page-title" translate>BOOKITEM_ADD.TITLEADD</h3>
+  </div>
+</div>
+
+<div class="page-header row no-gutters py-4" *ngIf="isEdit">
+  <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+    <h3 class="page-title" translate>BOOKITEM_ADD.TITLEEDIT</h3>
+  </div>
+</div>
+
+<app-tool-bar (saveEvent)="saveEvent()"></app-tool-bar>
+<div class="card card-small mb-3">
+  <div class="card-header">
+    <span translate>BOOKITEM.TITLE</span>
+  </div>
+  <div class="card-body">
+    <form [formGroup]="dataForm">
+      <div class="row">
+        <div class="col-6">
+          <div class="form-group">
+            <label translate>BOOKITEM_ADD.BARCODE</label>
+            <input type="text" class="form-control form-control-sm" formControlName="barcode" required pattern="[a-zA-Z-0-9]*"
+              [ngClass]="{ 'is-invalid': isSubmited && fControls.barcode.errors }">
+            <div *ngIf="isSubmited && fControls.barcode.errors" class="invalid-feedback">
+              <div *ngIf="fControls.barcode.errors.required">Barcode is required</div>
+              <div *ngIf="fControls.barcode.errors.pattern">Barcode is invalid</div>
+              <div *ngIf="fControls.barcode.errors.maxlength">Barcode must not enter more than 50 characters</div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-6">
+          <div class="form-group">
+            <label translate>STATUS.NAME</label>
+            <select class="form-control form-control-sm" formControlName="statusId" required
+              [ngClass]="{ 'is-invalid': isSubmited && fControls.statusId.errors }">
+              <option value="" selected disabled hidden>Choose Here</option>
+              <option [ngValue]="status.id" *ngFor="let status of status">{{status.name}}</option>
+            </select>
+            <div *ngIf="isSubmited && fControls.statusId.errors" class="invalid-feedback">
+              <div *ngIf="fControls.statusId.errors.required">Status is required</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="form-group">
+            <label translate>RACK.NUMBER</label>
+            <select class="form-control form-control-sm" formControlName="rackId" required
+              [ngClass]="{ 'is-invalid': isSubmited && fControls.rackId.errors }">
+              <option value="" selected disabled hidden>Choose Here</option>
+              <option [ngValue]="rack.id" *ngFor="let rack of racks">{{rack.number}}</option>
+            </select>
+            <div *ngIf="isSubmited && fControls.rackId.errors" class="invalid-feedback">
+              <div *ngIf="fControls.rackId.errors.required">Rack number is required</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="form-group">
+            <label translate>FORMAT.NAME</label>
+            <select class="form-control form-control-sm" formControlName="formatId" required
+              [ngClass]="{ 'is-invalid': isSubmited && fControls.formatId.errors }">
+              <option value="" selected disabled hidden>Choose Here</option>
+              <option [ngValue]="format.id" *ngFor="let format of formats">{{format.name}}</option>
+            </select>
+            <div *ngIf="isSubmited && fControls.formatId.errors" class="invalid-feedback">
+              <div *ngIf="fControls.formatId.errors.required">Format is required</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="form-group">
+            <label translate>BOOKITEM_ADD.PRICE</label>
+            <input type="number" class="form-control form-control-sm" formControlName="price" [(ngModel)]="price" max="999999999"
+              id="price" [ngClass]="{ 'is-invalid': isSubmited && fControls.price.errors }">
+            <div style="margin-top: 10px;">{{ price | currency: "VND" : "symbol" }}</div>
+
+            <div *ngIf="isSubmited && fControls.price.errors" class="invalid-feedback">
+              <div *ngIf="fControls.price.errors.max">Number must not enter more than 999999999 </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="form-group">
+            <label translate>BOOKITEM_ADD.PUBLISHDATE</label>
+            <input type="text" class="form-control form-control-sm" formControlName="publicationYear" pattern="^\d{4}$"
+              [ngClass]="{ 'is-invalid': isSubmited && fControls.publicationYear.errors }" placeholder="YYYY">
+            <div *ngIf="isSubmited && fControls.publicationYear.errors" class="invalid-feedback">
+              <div *ngIf="fControls.publicationYear.errors.pattern">Publish year is invalid</div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-6">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" formControlName="isReferenceOnly">
+            <label translate>BOOKITEM_ADD.REF</label>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" formControlName="isRareBook">
+            <label translate>BOOKITEM_ADD.RAREBOOK</label>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<div class="card card-small mb-3">
+  <div class="card-header">
+    <span translate>BOOK.TITLE</span>
+  </div>
+  <div class="card-body">
+    <form [formGroup]="dataForm">
+      <div class="row">
+        <div class="col-6">
+          <div class="form-group">
+            <label translate>BOOKITEM.NAME</label>
+            <select class="form-control form-control-sm" formControlName="bookId" (change)="handleFunction($event)"
+              required [ngClass]="{ 'is-invalid': isSubmited && fControls.bookId.errors }">
+              <option [ngValue]="book.id" *ngFor="let book of books"> {{book.title}} </option>
+            </select>
+            <div *ngIf="isSubmited && fControls.bookId.errors" class="invalid-feedback">
+              <div *ngIf="fControls.bookId.errors.required">Book is required</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row" *ngIf="isShowBookInformation">
+        <div class="col-6">
+          <div class="form-group">
+            <label translate>BOOK.ISBN</label>
+            <input class="form-control form-control-sm" disabled="disabled" [value]="bookIsbn">
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="form-group">
+            <label translate>BOOK.NAME</label>
+            <input class="form-control form-control-sm" disabled="disabled" [value]="bookName">
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="form-group">
+            <label translate>BOOK.SUBJECT</label>
+            <textarea class="form-control form-control-sm" disabled="disabled" [value]="bookSubject"> </textarea>
+          </div>
+        </div>
+
+
+        <div class="col-6">
+          <div class="form-group">
+            <label translate>PUBLISHER_ADD.NAME</label>
+            <input class="form-control form-control-sm" disabled="disabled" [value]="bookPublisher">
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="form-group">
+            <label translate>AUTHOR_ADD.NAME</label>
+            <input class="form-control form-control-sm" disabled="disabled" [value]="bookAuthor">
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="form-group">
+            <label translate>CATALOG_ADD.NAME</label>
+            <input class="form-control form-control-sm" disabled="disabled" [value]="bookCatalog">
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="form-group">
+            <label translate>LANGUAGE.NAME</label>
+            <input class="form-control form-control-sm" disabled="disabled" [value]="bookLanguage">
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="form-group">
+            <label translate>BOOK.NUMBERPAGES</label>
+            <input class="form-control form-control-sm" disabled="disabled" [value]="bookNumberPage">
+          </div>
+        </div>
+
+        <div class="col-6">
+          <label style="display: block;">Image</label>
+          <img [src]="bookImage" class="bookitem-image">
+        </div>
+
+      </div>
+    </form>
+  </div>

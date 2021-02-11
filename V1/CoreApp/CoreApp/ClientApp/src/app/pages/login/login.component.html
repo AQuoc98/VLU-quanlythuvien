@@ -1,0 +1,45 @@
+<div class="main-content-container container-fluid px-4 my-auto h-100">
+    <div class="row no-gutters h-100">
+        <div class="col-lg-3 col-md-5 auth-form mx-auto my-auto">
+            <div class="card">
+                <div class="card-body">
+                    <img class="auth-form__logo d-table mx-auto mb-3" src="../../../assets/admin/images/logo-scorpion.png"
+                        alt="Shards Dashboards - Register Template">
+                    <h5 class="auth-form__title text-center mb-4" translate>LOGIN.TITLE</h5>
+                    <form (ngSubmit)="login()" [formGroup]="loginForm">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1" translate>LOGIN.LABEL_USER</label>
+                            <input type="text" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                formControlName="username" autocomplete="username" [placeholder]="'LOGIN.LABEL_USER' | translate">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1" translate>LOGIN.LABEL_PASSWORD</label>
+                            <input type="password" class="form-control form-control-sm" id="exampleInputPassword1" formControlName="password"
+                                autocomplete="current-password" [placeholder]="'LOGIN.LABEL_PASSWORD' | translate">
+                        </div>
+                        <div class="form-group mb-3 d-table mx-auto">
+                            <div class="custom-control custom-checkbox mb-1">
+                                <input type="checkbox" class="custom-control-input" id="customCheck2" formControlName="remember">
+                                <label class="custom-control-label" for="customCheck2" translate>LOGIN.LABEL_REMEMBER</label>
+                            </div>
+                        </div>
+                        <button type="submit" [disabled]="loginForm.invalid" class="btn btn-pill btn-accent d-table mx-auto"
+                            translate>LOGIN.BUTTON_SIGN_IN</button>
+                    </form>
+                </div>
+                <div class="card-footer border-top">
+                    <ul class="auth-form__social-icons d-table mx-auto">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-github"></i></a></li>
+                        <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- <div class="auth-form__meta d-flex mt-4">
+                <a href="forgot-password.html" translate>LOGIN.LABEL_FORGOT_PASSWORD</a>
+                <a class="ml-auto" href="register.html" translate>LOGIN.LABEL_CREATE_NEW_ACCOUNT</a>
+            </div> -->
+        </div>
+    </div>
+</div>

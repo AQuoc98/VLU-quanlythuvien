@@ -1,0 +1,29 @@
+<app-tool-bar (saveEvent)="saveEvent()"></app-tool-bar>
+<div class="card card-small mb-3">
+    <div class="card-body">
+        <form [formGroup]="dataForm">
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <label translate>MODULE_ADD.CODE</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="code" [ngClass]="{ 'is-invalid': isSubmited && fControls.code.errors }">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label translate>MODULE_ADD.NAME</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="name" [ngClass]="{ 'is-invalid': isSubmited && fControls.name.errors }">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="actived" formControlName="isActived">
+                            <label class="custom-control-label" for="actived" translate>MODULE_ADD.ACTIVED</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

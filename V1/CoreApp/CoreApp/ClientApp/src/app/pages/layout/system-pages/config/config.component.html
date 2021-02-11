@@ -1,0 +1,9 @@
+<div class="card card-small mb-3">
+    <div class="card-body">
+        <button (click)="save()" type="submit" class="btn btn-sm btn-success mr-1" translate><i
+                class="material-icons">save</i>
+            TOOL_BAR.BUTTON_ADD</button>
+    </div>
+</div>
+
+<app-dynamic-form [formConfig]="formConfig" (formAfterInit)="formAfterInit($event)"></app-dynamic-form>

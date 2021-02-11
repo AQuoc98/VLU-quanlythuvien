@@ -1,0 +1,45 @@
+.modal-body {
+  padding: 0 !important;  
+}
+
+:host ::ng-deep .tab-content {
+    padding: 5px 15px;
+}
+
+.file-manager__item {
+    border-radius: .25rem !important;
+    height: 80%;
+}
+.file-manager__item-preview{
+    width: 170px;
+    height: 150px;
+}
+
+.file-manager-cards .file-manager__item-preview img {
+    width: 80% !important;
+    height: 80% !important;
+    margin: auto !important;
+}
+
+.dropzone input {
+    position: absolute;
+    width: 94%;
+    height: 42%;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+.create-directory{
+    .card-footer{
+        padding-top: 13px !important;
+        padding-bottom: 13px !important;
+    }
+
+    input{
+        z-index: 9999;
+    }
+}
+
+.background-selecting ::ng-deep .tab-content{
+    background-color: #C0C0C0 !important;
+}

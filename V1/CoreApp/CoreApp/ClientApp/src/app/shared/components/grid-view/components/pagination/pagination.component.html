@@ -1,0 +1,12 @@
+<div class="dataTables_info" role="status">
+    <span translate>GRID_VIEW.PAGING_LABEL_SHOW</span> {{((pagingInfo.pageIndex-1) * pagingInfo.pageSize) + 1}}
+    <span translate>GRID_VIEW.PAGING_LABEL_TO</span> {{calculateTo()}}
+    <span translate>GRID_VIEW.PAGING_LABEL_OF</span> {{pagingInfo.totalRow}}
+    <span translate>GRID_VIEW.PAGING_LABEL_ENTRIES</span>
+</div>
+<div class="dataTables_paginate paging_simple_numbers">
+    <pagination (pageChanged)="onPageSelect($event)" [totalItems]="pagingInfo.totalRow" [itemsPerPage]="pagingInfo.pageSize"
+        [rotate]="true" [(ngModel)]="value" [maxSize]="8" [boundaryLinks]="true" previousText="&lsaquo;" nextText="&rsaquo;"
+        firstText="&laquo;" lastText="&raquo;">
+    </pagination>
+</div>

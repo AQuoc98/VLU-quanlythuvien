@@ -1,0 +1,72 @@
+<app-tool-bar (saveEvent)="saveEvent()"></app-tool-bar>
+<div class="card card-small mb-3">
+    <div class="card-body">
+        <form [formGroup]="dataForm">
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <label translate>MENU_ADD.MODULE</label>
+                        <select class="form-control form-control-sm" (change)="moduleChanged()" formControlName="moduleId"
+                            [ngClass]="{ 'is-invalid': isSubmited && fControls.moduleId.errors }">
+                            <option [ngValue]="module.id" *ngFor="let module of modules">{{module.name}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label translate>MENU_ADD.VIEW</label>
+                        <select class="form-control form-control-sm" formControlName="viewId" [ngClass]="{ 'is-invalid': isSubmited && fControls.viewId.errors }">
+                            <option [ngValue]="view.id" *ngFor="let view of views">{{view.name}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label translate>MENU_ADD.NAME</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="name" [ngClass]="{ 'is-invalid': isSubmited && fControls.name.errors }">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label translate>MENU_ADD.TITLE_DICT</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="titleDict" [ngClass]="{ 'is-invalid': isSubmited && fControls.titleDict.errors }">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label translate>MENU_ADD.HREF</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="href" [ngClass]="{ 'is-invalid': isSubmited && fControls.href.errors }">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label translate>MENU_ADD.ICON</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="icon" [ngClass]="{ 'is-invalid': isSubmited && fControls.icon.errors }">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label translate>MENU_ADD.POSITION</label>
+                        <input type="number" class="form-control form-control-sm" formControlName="position" [ngClass]="{ 'is-invalid': isSubmited && fControls.position.errors }">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label translate>MENU_ADD.PARENT_ID</label>
+                        <select class="form-control form-control-sm" formControlName="parentId" [ngClass]="{ 'is-invalid': isSubmited && fControls.parentId.errors }">
+                            <option [ngValue]="opt.id" *ngFor="let opt of parentMenus">{{opt.name}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="actived" formControlName="isActived">
+                            <label class="custom-control-label" for="actived" translate>MENU_ADD.IS_ACTIVED</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

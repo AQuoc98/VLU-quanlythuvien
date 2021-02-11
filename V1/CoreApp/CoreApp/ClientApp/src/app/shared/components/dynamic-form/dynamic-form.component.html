@@ -1,0 +1,17 @@
+<form [formGroup]="dyForm">
+    <div class="row" *ngFor="let fGroup of formConfig.fGroups;">
+        <ng-container dynamicField [field]="field" [group]="dyForm">
+        </ng-container>
+    </div>
+    <div class="card card-small mb-3" *ngFor="let fGroup of formConfig.fGroups;">
+        <div class="card-header">
+            <span translate>{{fGroup.label}}</span>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <ng-container *ngFor="let field of fGroup.fields;" dynamicField [field]="field" [group]="dyForm">
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</form>

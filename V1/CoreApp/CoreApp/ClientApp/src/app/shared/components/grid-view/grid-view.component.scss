@@ -1,0 +1,16 @@
+.dataTables_actions,
+.dataTables_filters {
+  padding: 15px 20px;
+}
+.custom-control {
+  padding-left: 0.6rem !important;
+}
+:host ::ng-deep .pagination {
+  display: inline-flex;
+}
+.pointer {
+  cursor: pointer;
+}
+.grid-spinner {
+  padding: 30px;
+}

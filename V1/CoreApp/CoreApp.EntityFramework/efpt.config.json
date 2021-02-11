@@ -1,0 +1,125 @@
+﻿{
+   "ContextClassName": "CoreAppDbContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Models",
+   "ProjectRootNamespace": "CoreApp.EntityFramework",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[CoreColumns]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[CoreConfigGroups]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[CoreConfigs]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[CoreCredentials]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[CoreCredentialTypes]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[CoreDataTypes]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[CoreEnums]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[CoreEnumValues]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[CoreEventLogs]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[CoreMenus]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[CoreModules]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[CorePermissions]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[CoreRoleModulePermissions]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[CoreRoles]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[CoreTables]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[CoreUserRoles]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[CoreUsers]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[CoreViewColumns]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[CoreViewOrderConditions]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[CoreViews]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[CoreViewSearchConditions]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[CoreViewSpecialConditions]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[DoDistricts]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[DoProvinces]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[DoWards]"
+      }
+   ],
+   "UseDatabaseNames": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": true,
+   "UseInflector": true,
+   "UseLegacyPluralizer": false,
+   "UseNodaTime": false,
+   "UseSpatial": false,
+   "UseStoredProcedures": false
+}

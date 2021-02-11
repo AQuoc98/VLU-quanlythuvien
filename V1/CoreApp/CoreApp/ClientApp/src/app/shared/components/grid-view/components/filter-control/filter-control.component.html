@@ -1,0 +1,45 @@
+<tr role="row" *ngIf="isShowFilter === true">
+  <th width="50" class="text-center">
+    <button class="btn btn-sm btn-success" (click)="filter()">
+      <i class="material-icons">filter_list</i>
+    </button>
+  </th>
+  <th *ngFor="let column of dataColumns; trackBy: filterViewTrackByFn">
+    <ng-container *ngIf="column.searchable == true">
+      <ng-container *ngIf="(column.dataTypeCode == dataTypes.Text ||
+                                column.dataTypeCode == dataTypes.MultiText ||
+                                column.dataTypeCode == dataTypes.Email ||
+                                column.dataTypeCode == dataTypes.Number ||
+                                column.dataTypeCode == dataTypes.Currency)">
+        <input [(ngModel)]="filterModel[column.sqlName]" type="text" class="form-control form-control-sm"
+          (input)="filter()">
+      </ng-container>
+
+      <ng-container *ngIf="column.dataTypeCode == dataTypes.Date">
+        <input [(ngModel)]="filterModel[column.sqlName]" type="text" class="form-control form-control-sm" bsDatepicker>
+      </ng-container>
+
+      <ng-container *ngIf="column.dataTypeCode == dataTypes.DateTime">
+        <input [(ngModel)]="filterModel[column.sqlName]" type="date" class="form-control form-control-sm"
+          (change)="filter()">
+      </ng-container>
+
+      <ng-container *ngIf="column.dataTypeCode == dataTypes.DateRange">
+        <input [(ngModel)]="filterModel[column.sqlName]" type="text" class="form-control form-control-sm"
+          bsDaterangepicker>
+      </ng-container>
+
+      <ng-container *ngIf="column.dataTypeCode == dataTypes.Select">
+        <ng-select [(ngModel)]="filterModel[column.sqlName]" class="custom-ng-select"
+          [items]="filterSelectData[column.sqlName]" bindLabel="name" (change)="filter()" bindValue="id">
+        </ng-select>
+      </ng-container>
+
+      <ng-container *ngIf="column.dataTypeCode == dataTypes.MultiSelect">
+        <ng-select [(ngModel)]="filterModel[column.sqlName]" [closeOnSelect]="false" [multiple]="true"
+          class="custom-ng-select" [items]="filterSelectData[column.sqlName]" bindLabel="name" autofocus bindValue="id">
+        </ng-select>
+      </ng-container>
+    </ng-container>
+  </th>
+</tr>

@@ -1,0 +1,53 @@
+<div class="page-header row no-gutters py-4" *ngIf="!isEdit">
+  <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+    <h3 class="page-title" translate>RACK_ADD.TITLEADD</h3>
+  </div>
+</div>
+
+<div class="page-header row no-gutters py-4" *ngIf="isEdit">
+  <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+    <h3 class="page-title" translate>RACK_ADD.TITLEEDIT</h3>
+  </div>
+</div>
+
+<app-tool-bar (saveEvent)="saveEvent()"></app-tool-bar>
+
+<div class="card card-small mb-3">
+  <div class="card-header">
+    <span translate>RACK_ADD.TITLE_RACK_INFO</span>
+  </div>
+  <div class="card-body">
+    <form [formGroup]="dataForm">
+      <div class="row">
+        <div class="col-8">
+          <div class="form-group">
+            <label translate>RACK_ADD.NUMBER</label>
+            <input type="number" class="form-control form-control-sm" formControlName="number" required max="999999999"
+              [ngClass]="{ 'is-invalid': isSubmited && fControls.number.errors }">
+            <div *ngIf="isSubmited && fControls.number.errors" class="invalid-feedback">
+              <div *ngIf="fControls.number.errors.required">Number is required</div>
+              <div *ngIf="fControls.number.errors.max">Number must not enter more than 999999999 </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-8">
+          <div class="form-group">
+            <label translate>RACK_ADD.LOCATIONIDENTIFIER</label>
+            <textarea type="text" class="form-control form-control-sm" formControlName="locationIndentifier"
+            [ngClass]="{ 'is-invalid': isSubmited && fControls.locationIndentifier.errors }">
+
+            </textarea>
+            <div *ngIf="isSubmited && fControls.locationIndentifier.errors" class="invalid-feedback">
+              <div *ngIf="fControls.locationIndentifier.errors.maxlength">Description must not enter more than 500 characters</div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+  </div>
+
+</div>

@@ -1,0 +1,113 @@
+<div class="page-header row no-gutters py-4" *ngIf="!isEdit">
+  <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+    <h3 class="page-title" translate>MEMBER_ADD.TITLEADD</h3>
+  </div>
+</div>
+
+<div class="page-header row no-gutters py-4" *ngIf="isEdit">
+  <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+    <h3 class="page-title" translate>MEMBER_ADD.TITLEEDIT</h3>
+  </div>
+</div>
+
+<app-tool-bar (saveEvent)="saveEvent()"></app-tool-bar>
+
+<div class="card card-small mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#memberForm">
+    <span translate>MEMBER_ADD.TITLE_MEMBER_INFO</span>
+  </div>
+  <div class="card-body" id="memberForm">
+    <form [formGroup]="dataForm">
+      <div class="row">
+        <div class="col-6">
+          <div class="form-group">
+            <label translate>MEMBER.MEMBERCODE</label>
+            <input type="text" class="form-control form-control-sm" formControlName="memberCode"
+              [ngClass]="{ 'is-invalid': isSubmited && fControls.memberCode.errors }" pattern="^[a-zA-Z0-9]*$" required minlength="7" maxlength="50">
+            <div *ngIf="isSubmited && fControls.memberCode.errors" class="invalid-feedback">
+              <div *ngIf="fControls.memberCode.errors.required">Member code is required</div>
+              <div *ngIf="fControls.memberCode.errors.pattern">Member code is invalid</div>
+              <div *ngIf="fControls.memberCode.errors.minlength">Member code is at least 7 characters</div>
+              <div *ngIf="fControls.memberCode.errors.maxlength">Member code is must not be exceeded 50 characters</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="form-group">
+            <label translate>MEMBER.NAME</label>
+            <input type="text" class="form-control form-control-sm" formControlName="name" minlength="2" maxlength="255"
+              [ngClass]="{ 'is-invalid': isSubmited && fControls.name.errors }" required
+              pattern="[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF a-zA-Z ]*">
+            <div *ngIf="isSubmited && fControls.name.errors" class="invalid-feedback">
+              <div *ngIf="fControls.name.errors.required">Name is required</div>
+              <div *ngIf="fControls.name.errors.minlength">Name must be at least 2 characters</div>
+              <div *ngIf="fControls.name.errors.maxlength">Name must be 255 characters at most</div>
+              <div *ngIf="fControls.name.errors.pattern">Name is invalid</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="form-group">
+            <label translate>MEMBER.PHONE</label>
+            <input type="text" class="form-control form-control-sm" formControlName="phone" required
+              [ngClass]="{ 'is-invalid': isSubmited && fControls.phone.errors }" pattern="^((\\+91-?)|0)?[0-9]{10}$">
+            <div *ngIf="isSubmited && fControls.phone.errors" class="invalid-feedback">
+              <div *ngIf="fControls.phone.errors.required">Phone is required</div>
+              <div *ngIf="fControls.phone.errors.minlength">Phone must be at least 10 characters</div>
+              <div *ngIf="fControls.phone.errors.pattern">Phone is invalid</div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="form-group">
+            <label translate>MEMBER_ADD.GENDER</label>
+            <select type="text" class="form-control form-control-sm" formControlName="gender" required
+              [ngClass]="{ 'is-invalid': isSubmited && fControls.gender.errors }">
+              <option value="" selected disabled hidden>Choose Here</option>
+              <option value="true">Nữ</option>
+              <option value="false">Nam</option>
+            </select>
+            <div *ngIf="isSubmited && fControls.gender.errors?.required" class="invalid-feedback">
+              <sup></sup>Please enter your gender
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="form-group">
+            <label translate>MEMBER.MEMBERGROUP</label>
+            <select class="form-control form-control-sm" formControlName="memberGroupId" required
+              [ngClass]="{ 'is-invalid': isSubmited && fControls.memberGroupId.errors }">
+              <option value="" selected disabled hidden>Choose Here</option>
+              <option [ngValue]="membergroup.id" *ngFor="let membergroup of membergroups">{{membergroup.name}}</option>
+            </select>
+            <div *ngIf="isSubmited && fControls.memberGroupId.errors" class="invalid-feedback">
+              <div *ngIf="fControls.memberGroupId.errors.required">Member group is required</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="form-group">
+            <label translate>MEMBER_ADD.ADDRESS</label>
+            <textarea type="text" class="form-control form-control-sm" formControlName="address" maxlength="500"
+              [ngClass]="{ 'is-invalid': isSubmited && fControls.address.errors }"></textarea>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <label>Image</label>
+            <input type="file" name="file" ng2FileSelect [uploader]="uploader" accept="image/"
+              class="form-control form-control-sm">
+            <img *ngIf="imageUrl" [src]="imageUrl" class="img img--size">
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

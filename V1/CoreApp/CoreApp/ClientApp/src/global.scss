@@ -1,0 +1,25 @@
+
+// Libs
+@import url("https://use.fontawesome.com/releases/v5.9.0/css/all.css");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+// Ngx Bootstrap
+@import "../node_modules/ngx-bootstrap/datepicker/bs-datepicker.scss";
+
+// Ng Select
+@import "../node_modules/@ng-select/ng-select/themes/default.theme.css";
+
+// Admin 
+@import "assets/admin/styles/shards-dashboards.1.1.0.min.css";
+@import "assets/admin/styles/extras.1.1.0.min.css";
+
+// Custom CSS
+@import "assets/admin/styles/scss/style.scss";
+
+// Full calendar
+@import '../node_modules/@fullcalendar/core/main.css';
+@import '../node_modules/@fullcalendar/daygrid/main.css';
+@import '../node_modules/@fullcalendar/timegrid/main.css';
+@import '../node_modules/@fullcalendar/list/main.css';
+@import '../node_modules/@fullcalendar/bootstrap/main.css';

@@ -1,0 +1,155 @@
+<div class="page-header row no-gutters py-4">
+  <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+    <h3 class="page-title" translate>USER_ADD.TITLE_USER_INFO</h3>
+  </div>
+</div>
+
+<app-tool-bar (saveEvent)="saveEvent()"></app-tool-bar>
+<div class="card card-small mb-3">
+  <div class="card-header">
+    <span translate>PROFILE.TITLE_USER_INFO</span>
+  </div>
+  <div class="card-body">
+    <form [formGroup]="dataForm">
+      <div class="row">
+        <div class="col-6">
+          <div class="form-group">
+            <label translate>PROFILE.NAME</label>
+            <input type="text" class="form-control form-control-sm" formControlName="name" required minlength="2"
+              maxlength="10" [ngClass]="{ 'is-invalid': isSubmited && fControls.name.errors }" pattern="[a-zA-Z ]*">
+
+            <div *ngIf="isSubmited && fControls.name.errors" class="invalid-feedback">
+              <div *ngIf="fControls.name.errors.required">Name is required</div>
+              <div *ngIf="fControls.name.errors.minlength">Name must be at least 2 characters</div>
+              <div *ngIf="fControls.name.errors.pattern">Name is invalid</div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-6">
+          <div class="form-group">
+            <label translate>PROFILE.EMAIL</label>
+            <input type="text" class="form-control form-control-sm" formControlName="email" required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+              [ngClass]="{ 'is-invalid': isSubmited && fControls.email.errors }">
+
+            <div *ngIf="isSubmited && fControls.email.errors" class="invalid-feedback">
+              <div *ngIf="fControls.email.errors.required">Email is required</div>
+              <div *ngIf="fControls.email.errors.pattern">Email must be a valid email address </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="row">
+
+        <div class="col-6">
+          <div class="form-group">
+            <label translate>PROFILE.PHONE</label>
+            <input type="text" class="form-control form-control-sm" formControlName="phone" required
+              [ngClass]="{ 'is-invalid': isSubmited && fControls.phone.errors }" pattern="^((\\+91-?)|0)?[0-9]{10}$">
+            <div *ngIf="isSubmited && fControls.phone.errors" class="invalid-feedback">
+              <div *ngIf="fControls.phone.errors.required">Phone is required</div>
+              <div *ngIf="fControls.phone.errors.minlength">Phone must be at least 10 characters</div>
+              <div *ngIf="fControls.phone.errors.pattern">Phone is invalid</div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-6">
+          <div class="form-group">
+            <label translate>PROFILE.GENDER</label>
+            <select type="text" class="form-control form-control-sm" formControlName="gender" required
+              [ngClass]="{ 'is-invalid': isSubmited && fControls.gender.errors }">
+              <option value="" selected disabled hidden>Choose Here</option>
+              <option value="true">Nữ</option>
+              <option value="false">Nam</option>
+            </select>
+            <div *ngIf="isSubmited && fControls.gender.errors?.required" class="invalid-feedback">
+              <sup></sup>Please enter your gender
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="form-group">
+            <label translate>PROFILE.ADDRESS</label>
+            <textarea type="text" class="form-control form-control-sm" minlength="4" maxlength="100" required
+              formControlName="address" [ngClass]="{ 'is-invalid': isSubmited && fControls.address.errors }"></textarea>
+            <div *ngIf="isSubmited && fControls.address.errors" class="invalid-feedback">
+              <div *ngIf="fControls.address.errors.required">Address is required</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="card card-small mb-3">
+  <div class="card-header">
+    <span translate>PROFILE.TITLE_CREDENTIAL</span>
+  </div>
+  <div class="card-body">
+    <form [formGroup]="loginInfoForm">
+      <div class="row">
+        <div class="col-4">
+          <div class="form-group">
+            <label translate>PROFILE.USER_NAME</label>
+            <input disabled type="text" class="form-control form-control-sm" formControlName="identifier"
+              [ngClass]="{ 'is-invalid': isSubmited && fLoginInfoControls.identifier.errors }">
+          </div>
+        </div>
+        <!-- <div class="col-4">
+          <div class="form-group">
+            <label translate>PROFILE.PASSWORD</label>
+            <input type="password" class="form-control form-control-sm" formControlName="secret"
+              [ngClass]="{ 'is-invalid': isSubmited && fLoginInfoControls.secret.errors }">
+          </div>
+        </div> -->
+        <div class="col-4">
+          <div class="form-group">
+            <label translate>PROFILE.NEWPASSWORD</label>
+            <input type="password" class="form-control form-control-sm" formControlName="newSecret"
+              [ngClass]="{ 'is-invalid': isSubmited && fLoginInfoControls.newSecret.errors }">
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label translate>PROFILE.CNEWPASSWORD</label>
+            <input type="password" class="form-control form-control-sm" formControlName="cnewSecret"
+              [ngClass]="{ 'is-invalid': isSubmited && fLoginInfoControls.cnewSecret.errors }">
+
+            <div *ngIf="isSubmited && fLoginInfoControls.cnewSecret.errors" class="invalid-feedback">
+              <div *ngIf="fLoginInfoControls.cnewSecret.errors">
+                Confirm password is incorrect</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="card card-small mb-3">
+  <div class="card-header">
+    <span translate>PROFILE.TITLE_ROLE</span>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-4" *ngFor="let item of userRoles; index as i">
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" [(ngModel)]="item.isSelected" id="role_{{i}}" disabled>
+          <label class="custom-control-label" for="role_{{i}}">{{item.name}}</label>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

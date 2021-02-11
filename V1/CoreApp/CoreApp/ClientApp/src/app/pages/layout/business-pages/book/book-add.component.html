@@ -1,0 +1,157 @@
+<div class="page-header row no-gutters py-4" *ngIf="!isEdit">
+  <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+    <h3 class="page-title" translate>BOOK_ADD.TITLEADD</h3>
+  </div>
+</div>
+
+<div class="page-header row no-gutters py-4" *ngIf="isEdit">
+  <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+    <h3 class="page-title" translate>BOOK_ADD.TITLEEDIT</h3>
+  </div>
+</div>
+
+<app-tool-bar (saveEvent)="saveEvent()"></app-tool-bar>
+
+<div class="card card-small mb-3"  >
+  <div class="card-header" data-toggle="collapse" data-target="#bookForm">
+    <span translate>BOOK.TITLE</span>
+  </div>
+
+  <div class="card-body"  id="bookForm">
+    <form [formGroup]="dataForm">
+      <div class="row">
+        <div class="col-6">
+          <div class="form-group">
+            <label translate>BOOK.ISBN</label>
+            <input type="text" class="form-control form-control-sm" formControlName="isbn"
+              [ngClass]="{ 'is-invalid': isSubmited && fControls.isbn.errors }"
+              pattern="^(?=(?:\D*\d){10}(?:(?:\D*\d){3})?$)[\d-]+$" required>
+            <div *ngIf="isSubmited && fControls.isbn.errors" class="invalid-feedback">
+              <div *ngIf="fControls.isbn.errors.required">ISBN is required</div>
+              <div *ngIf="fControls.isbn.errors.pattern">ISBN is invalid</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="form-group">
+            <label translate>BOOK.NAME</label>
+            <input type="text" class="form-control form-control-sm" formControlName="title"
+              [ngClass]="{ 'is-invalid': isSubmited && fControls.title.errors }" required>
+            <div *ngIf="isSubmited && fControls.title.errors" class="invalid-feedback">
+              <div *ngIf="fControls.title.errors.required">Title is required</div>
+              <div *ngIf="fControls.title.errors.maxlength">Title must not enter more than 500 characters</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="form-group">
+            <label translate>BOOK.SUBJECT</label>
+            <textarea type="text" class="form-control form-control-sm" formControlName="subject" maxlength="1500"
+              [ngClass]="{ 'is-invalid': isSubmited && fControls.subject.errors }">
+              </textarea>
+            <div *ngIf="isSubmited && fControls.subject.errors" class="invalid-feedback">
+              <div *ngIf="fControls.subject.errors.maxlength">Subject must not enter more than 1500 characters</div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="form-group">
+            <label translate>BOOK.NUMBERPAGES</label>
+            <input type="number" class="form-control form-control-sm" formControlName="numberOfPages"
+              [ngClass]="{ 'is-invalid': isSubmited && fControls.numberOfPages.errors }">
+            <div *ngIf="isSubmited && fControls.numberOfPages.errors" class="invalid-feedback">
+              <div *ngIf="fControls.numberOfPages.errors.max">Number of pages is invalid</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <label>Image</label>
+            <input type="file" name="file" ng2FileSelect [uploader]="uploader" accept="image/"
+              class="form-control form-control-sm">
+            <img width="400px" height="400px" *ngIf="imageUrl" [src]="imageUrl" class="image">
+          </div>
+        </div>
+
+      </div>
+
+
+
+    </form>
+  </div>
+</div>
+
+<div class="card card-small mb-3">
+  <div class="card-header" data-toggle="collapse" data-target="#bookCategoryForm">
+    <span translate>BOOK.TITLE_CATEGORY_INFO</span>
+  </div>
+  <div class="card-body" id="bookCategoryForm">
+    <form [formGroup]="dataForm">
+      <div class="row">
+        <div class="col-6">
+          <div class="form-group">
+            <label translate>PUBLISHER_ADD.NAME</label>
+            <select class="form-control form-control-sm" formControlName="publishierId" required
+              [ngClass]="{ 'is-invalid': isSubmited && fControls.publishierId.errors }">
+              <option value="" selected disabled hidden>Choose Here</option>
+              <option [ngValue]="publisher.id" *ngFor="let publisher of publishers">{{publisher.name}}</option>
+            </select>
+            <div *ngIf="isSubmited && fControls.publishierId.errors" class="invalid-feedback">
+              <div *ngIf="fControls.publishierId.errors.required">Publisher is required</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="form-group">
+            <label translate>AUTHOR_ADD.NAME</label>
+            <select class="form-control form-control-sm" formControlName="authorId" required
+              [ngClass]="{ 'is-invalid': isSubmited && fControls.authorId.errors }">
+              <option value="" selected disabled hidden>Choose Here</option>
+              <option [ngValue]="author.id" *ngFor="let author of authors">{{author.name}}</option>
+            </select>
+            <div *ngIf="isSubmited && fControls.authorId.errors" class="invalid-feedback">
+              <div *ngIf="fControls.authorId.errors.required">Author is required</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="form-group">
+            <label translate>CATALOG_ADD.NAME</label>
+
+            <select class="form-control form-control-sm" formControlName="catalogId" required
+              [ngClass]="{ 'is-invalid': isSubmited && fControls.catalogId.errors }">
+              <option value="" selected disabled hidden>Choose Here</option>
+              <option [ngValue]="catalog.id" *ngFor="let catalog of catalogs">{{catalog.name}}</option>
+            </select>
+            <div *ngIf="isSubmited && fControls.catalogId.errors" class="invalid-feedback">
+              <div *ngIf="fControls.catalogId.errors.required">Catalog is required</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="form-group">
+            <label translate>LANGUAGE.NAME</label>
+            <select class="form-control form-control-sm" formControlName="languageId" required
+              [ngClass]="{ 'is-invalid': isSubmited && fControls.languageId.errors }">
+              <option value="" selected disabled hidden>Choose Here</option>
+              <option [ngValue]="language.id" *ngFor="let language of languages">{{language.name}}</option>
+            </select>
+            <div *ngIf="isSubmited && fControls.languageId.errors" class="invalid-feedback">
+              <div *ngIf="fControls.languageId.errors.required">Language is required</div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </form>
+  </div>
+</div>

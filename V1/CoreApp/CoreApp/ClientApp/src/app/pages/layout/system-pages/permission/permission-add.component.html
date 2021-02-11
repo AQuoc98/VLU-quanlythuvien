@@ -1,0 +1,88 @@
+<app-tool-bar (saveEvent)="saveEvent()"></app-tool-bar>
+<div class="card card-small mb-3">
+    <div class="card-header">
+        <span translate>PERMISSION_ADD.TITLE_ROLE_INFO</span>
+    </div>
+    <div class="card-body">
+        <form [formGroup]="dataForm">
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <label translate>PERMISSION_ADD.CODE</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="code"
+                            [ngClass]="{ 'is-invalid': isSubmited && fControls.code.errors }">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label translate>PERMISSION_ADD.NAME</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="name"
+                            [ngClass]="{ 'is-invalid': isSubmited && fControls.name.errors }">
+                    </div>
+                </div>
+                <!-- <div class="col-4">
+                    <div class="form-group">
+                        <label translate>PERMISSION_ADD.TYPE</label>
+                        <select class="form-control form-control-sm" formControlName="type" [ngClass]="{ 'is-invalid': isSubmited && fControls.type.errors }">
+                            <option [ngValue]="type" *ngFor="let type of types">{{type}}</option>
+                        </select>
+                    </div>
+                </div> -->
+                <div class="col-12">
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="actived"
+                                formControlName="isActived">
+                            <label class="custom-control-label" for="actived"
+                                translate>PERMISSION_ADD.IS_ACTIVED</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="card card-small mb-3">
+    <div class="card-header">
+        <span translate>PERMISSION_ADD.TITLE_PERMISSION_DETAIL</span>
+    </div>
+    <div class="card-body">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th width="50" scope="col" class="text-center">#</th>
+                    <th scope="col" translate>PERMISSION_ADD.TH_MODULE</th>
+                    <th class="text-center" scope="col" translate>PERMISSION_ADD.TH_FULL_CONTROL</th>
+                    <th class="text-center" scope="col" translate *ngFor="let permission of permissions">
+                        {{permission.nameDict}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of modulePermissions; index as i; trackBy: trackByFn;">
+                    <td class="text-center">
+                        {{i + 1}}
+                    </td>
+                    <td>
+                        {{item.moduleName}}
+                    </td>
+                    <td class="text-center">
+                        <label class="custom-control material-checkbox">
+                            <input type="checkbox" class="material-control-input" [(ngModel)]="item.fullControl"
+                                (change)="fullControlChanged(item)">
+                            <span class="material-control-indicator"></span>
+                            <span class="material-control-description"></span>
+                        </label>
+                    </td>
+                    <td class="text-center" *ngFor="let permission of permissions">
+                        <label class="custom-control material-checkbox">
+                            <input type="checkbox" class="material-control-input" [(ngModel)]="item[permission.code]">
+                            <span class="material-control-indicator"></span>
+                            <span class="material-control-description"></span>
+                        </label>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

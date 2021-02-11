@@ -1,0 +1,190 @@
+<app-tool-bar (saveEvent)="saveEvent()"></app-tool-bar>
+<div class="card card-small mb-3">
+    <div class="card-header">
+        <span translate>TABLE_ADD.TABLE_TITLE</span>
+    </div>
+    <div class="card-body">
+        <form [formGroup]="dataForm">
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <label translate>TABLE_ADD.SQLNAME</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="sqlName" [ngClass]="{ 'is-invalid': isSubmited && fControls.sqlName.errors }">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label translate>TABLE_ADD.NAME</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="name" [ngClass]="{ 'is-invalid': isSubmited && fControls.name.errors }">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label translate>TABLE_ADD.ALIAS</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="alias" [ngClass]="{ 'is-invalid': isSubmited && fControls.alias.errors }">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label translate>TABLE_ADD.MODULE</label>
+                        <select class="form-control form-control-sm" formControlName="moduleId" [ngClass]="{ 'is-invalid': isSubmited && fControls.moduleId.errors }">
+                            <option [ngValue]="module.id" *ngFor="let module of modules">{{module.name}}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="card card-small mb-3">
+    <div class="card-header">
+        <span translate>TABLE_ADD.COLUMN_TITLE</span>
+    </div>
+    <div class="card-body">
+        <form (ngSubmit)="saveColumn()" [formGroup]="columnForm">
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <label translate>COLUMN_ADD.SQLNAME</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="sqlName" [ngClass]="{ 'is-invalid': isColumnFormSubmited && fColumnControls.sqlName.errors }">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label translate>COLUMN_ADD.NAME_DICT</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="nameDict" [ngClass]="{ 'is-invalid': isColumnFormSubmited && fColumnControls.nameDict.errors }">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label translate>COLUMN_ADD.NAME</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="name" [ngClass]="{ 'is-invalid': isColumnFormSubmited && fColumnControls.name.errors }">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label translate>COLUMN_ADD.TABLE_ALIAS</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="tableAlias" [ngClass]="{ 'is-invalid': isColumnFormSubmited && fColumnControls.tableAlias.errors }">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label translate>COLUMN_ADD.DATA_TYPE</label>
+                        <select class="form-control form-control-sm" formControlName="dataTypeId" [ngClass]="{ 'is-invalid': isColumnFormSubmited && fColumnControls.dataTypeId.errors }">
+                            <option [ngValue]="opt.id" *ngFor="let opt of dataTypes">{{opt.name}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-4" *ngIf="fColumnControls.isForeignKey.value != true">
+                    <div class="form-group">
+                        <label translate>COLUMN_ADD.ENUM</label>
+                        <select class="form-control form-control-sm" formControlName="enumId" [ngClass]="{ 'is-invalid': isColumnFormSubmited && fColumnControls.enumId.errors }">
+                            <option [ngValue]="opt.id" *ngFor="let opt of enums">{{opt.name}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-4" *ngIf="fColumnControls.isForeignKey.value == true">
+                    <div class="form-group">
+                        <label translate>COLUMN_ADD.TABLE</label>
+                        <select class="form-control form-control-sm" formControlName="foreignTableId" (change)="tableChanged()">
+                            <option [ngValue]="opt.id" *ngFor="let opt of tables">{{opt.name}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-4" *ngIf="fColumnControls.isForeignKey.value == true">
+                    <div class="form-group">
+                        <label translate>COLUMN_ADD.VALUE_COLUMN</label>
+                        <select class="form-control form-control-sm" (change)="foreignColumnValueChanged()" formControlName="foreignColumnValue">
+                            <option [ngValue]="opt.sqlName" *ngFor="let opt of foreignColumns">{{opt.name}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-4" *ngIf="fColumnControls.isForeignKey.value == true">
+                    <div class="form-group">
+                        <label translate>COLUMN_ADD.DISPLAY_COLUMN</label>
+                        <select class="form-control form-control-sm" (change)="foreignColumnDisplayChanged()" formControlName="foreignColumnDisplay">
+                            <option [ngValue]="opt.sqlName" *ngFor="let opt of foreignColumns">{{opt.name}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12" *ngIf="fColumnControls.isForeignKey.value == true">
+                    <div class="form-group">
+                        <label translate>COLUMN_ADD.SQL_SCRIPT</label>
+                        <textarea class="form-control" formControlName="sqlScript" [ngClass]="{ 'is-invalid': isColumnFormSubmited && fColumnControls.sqlScript.errors }"></textarea>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="isPrimaryKey" formControlName="isPrimaryKey">
+                            <label class="custom-control-label" for="isPrimaryKey" translate>COLUMN_ADD.ISPRIMARY_KEY</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="isForeignKey" formControlName="isForeignKey">
+                            <label class="custom-control-label" for="isForeignKey" translate>COLUMN_ADD.ISFOREIGN_KEY</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="searchable" formControlName="searchable">
+                            <label class="custom-control-label" for="searchable" translate>COLUMN_ADD.SEARCHABLE</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="sortable" formControlName="sortable">
+                            <label class="custom-control-label" for="sortable" translate>COLUMN_ADD.SORTABLE</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-sm btn-success" translate><i class="material-icons">save</i>
+                            COLUMN_ADD.BUTTON_SAVE</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="card-footer">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th width="50" scope="col">#</th>
+                    <th scope="col" translate>COLUMN_ADD.SQLNAME</th>
+                    <th scope="col" translate>COLUMN_ADD.NAME</th>
+                    <th scope="col" translate>COLUMN_ADD.NAME_DICT</th>
+                    <th scope="col" translate>COLUMN_ADD.DATA_TYPE</th>
+                    <th width="120" scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of columns; index as i">
+                    <th scope="row">{{i + 1}}</th>
+                    <td>{{item.sqlName}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.nameDict}}</td>
+                    <td>{{dataTypeName(item.dataTypeId)}}</td>
+                    <td>
+                        <div class="btn-group btn-group-sm" role="group">
+                            <button type="button" class="btn btn-white" (click)="editColumn(item)">
+                                <i class="material-icons">edit</i>
+                            </button>
+                            <button type="button" class="btn btn-white" (click)="clearColumn(i)">
+                                <i class="material-icons">clear</i>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

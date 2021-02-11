@@ -1,0 +1,52 @@
+<div class="page-header row no-gutters py-4" *ngIf="!isEdit">
+  <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+      <h3 class="page-title" translate>AUTHOR_ADD.TITLEADD</h3>
+  </div>
+</div>
+
+<div class="page-header row no-gutters py-4" *ngIf="isEdit">
+  <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+      <h3 class="page-title" translate>AUTHOR_ADD.TITLEEDIT</h3>
+  </div>
+</div>
+
+<app-tool-bar (saveEvent)="saveEvent()"></app-tool-bar>
+
+<div class="card card-small mb-3">
+  <div class="card-header">
+      <span translate>AUTHOR_ADD.TITLE_AUTHOR_INFO</span>
+  </div>
+  <div class="card-body">
+      <form [formGroup]="dataForm">
+          <div class="row">
+              <div class="col-8">
+                  <div class="form-group">
+                      <label translate>AUTHOR_ADD.NAME</label>
+                      <input type="text" class="form-control form-control-sm" formControlName="name" required
+                          [ngClass]="{ 'is-invalid': isSubmited && fControls.name.errors }" pattern="[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF a-zA-Z ]*">
+                          <div *ngIf="isSubmited && fControls.name.errors" class="invalid-feedback">
+                              <div *ngIf="fControls.name.errors.required">Name is required</div>
+                              <div *ngIf="fControls.name.errors.pattern">Name is invalid</div>
+                              <div *ngIf="fControls.name.errors.maxlength">Name must not enter more than 255 characters</div>
+                          </div>
+                  </div>
+
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-8">
+                  <div class="form-group">
+                      <label translate>AUTHOR_ADD.DESCRIPTION</label>
+                      <textarea type="text" class="form-control form-control-sm" formControlName="description"
+                      [ngClass]="{ 'is-invalid': isSubmited && fControls.description.errors }">
+
+                      </textarea>
+                      <div *ngIf="isSubmited && fControls.description.errors" class="invalid-feedback">
+                        <div *ngIf="fControls.description.errors.maxlength">Description must not enter more than 500 characters</div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </form>
+  </div>
+</div>

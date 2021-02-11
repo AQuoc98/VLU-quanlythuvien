@@ -1,0 +1,147 @@
+<div class="modal-header">
+  <h4 class="modal-title pull-left" translate>FILE_MANAGER.TITLE</h4>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="decline()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <tabset #staticTabs [ngClass]="{'background-selecting': isSelectToDelete === true}">
+    <tab heading="{{ 'FILE_MANAGER.TAB_IMAGES' | translate}}" id="tabImg">
+      <div class="file-manager file-manager-cards">
+        <div class="row">
+          <div class="col">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item" *ngFor="let bred of fileManager.breadcrumbs; index as i">
+                  <a (click)="directoryClick(bred)" href="javascript:void(0);">
+                    <i *ngIf="i === 0" class="material-icons">home</i>
+                    <span *ngIf="i > 0">{{bred.title}}</span>
+                  </a>
+                </li>
+              </ol>
+            </nav>
+
+            <div class="d-flex ml-lg-auto my-auto">
+              <div class="btn-group btn-group-sm mr-2 ml-lg-auto" role="group" aria-label="Table row actions">
+                <button type="button" class="btn btn-white" (click)="deleteFileOrDirectory()"
+                  [disabled]="!checkSelect() || !isSelectToDelete" *ngIf="isSelectToDelete" title="Xóa mục đã chọn">
+                  <i class="material-icons">delete_forever</i>
+                </button>
+                <button type="button" class="btn"
+                  [ngClass]="{'btn-primary': isSelectToDelete === true,'btn-white': isSelectToDelete === false}"
+                  (click)="selectToDelete()" title="Chọn để xóa">
+                  <i class="material-icons">{{isSelectToDelete?'playlist_add_check':'playlist_add'}}</i>
+                </button>
+                <button type="button" class="btn btn-white" (click)="addDirectory()" title="Thêm thư mục">
+                  <i class="material-icons">create_new_folder</i>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <ng-container *ngIf="fileManager.directories.length > 0">
+          <div class="row">
+            <div class="col">
+              <span class="file-manager__group-title text-uppercase text-light"
+                translate>FILE_MANAGER.DIRECTORIES</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3" *ngFor="let directory of fileManager.directories">
+              <div *ngIf="!directory.isCreating" (click)="directoryClick(directory)"
+                [ngClass]="{'file-manager__item--selected': directory.isSelected === true}"
+                class="file-manager__item file-manager__item--directory card card-small mb-3">
+                <div class="card-footer">
+                  <span class="file-manager__item-icon">
+                    <i class="material-icons"></i>
+                  </span>
+                  <h6 class="file-manager__item-title">{{directory.name}}</h6>
+                </div>
+              </div>
+
+              <div *ngIf="directory.isCreating"
+                class="file-manager__item file-manager__item--directory create-directory card card-small mb-3">
+                <div class="card-footer">
+                  <input autofocus class="form-control form-control-sm" (keyup.enter)="createDirectory()"
+                    [(ngModel)]="directory.name">
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+        <div class="row">
+          <div class="col">
+            <span class="file-manager__group-title text-uppercase text-light" translate>FILE_MANAGER.IMAGES</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-sm-6 col-lg-3" *ngFor="let file of fileManager.files">
+            <div (click)="fileClick(file)" [ngClass]="{'file-manager__item--selected': file.isSelected === true}"
+              class="file-manager__item card card-small mb-3">
+              <div class="file-manager__item-preview card-body px-0 pb-0 pt-4">
+                <img [src]="getSrcImage(file.websitePath)" alt=" File Manager - Item Preview">
+              </div>
+              <div class="card-footer border-top">
+                <h6 class="file-manager__item-title">{{file.name}}</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <pagination [totalItems]="paged.total" [(ngModel)]="paged.pageIndex" [maxSize]="10" [itemsPerPage]="12"
+          (pageChanged)="pageChanged($event)">
+        </pagination>
+      </div>
+    </tab>
+
+    <tab heading="{{ 'FILE_MANAGER.TAB_UPLOAD' | translate}}">
+      <div class="file-manager-cards__dropzone w-100 p-2">
+        <div class="dropzone dz-clickable">
+
+          <!-- <input type="file" name="file" *ngIf="!isAllowSelectMultiple" ng2FileSelect [uploader]="uploader"
+            accept="image/"> -->
+          <input type="file" name="file" multiple ng2FileSelect [uploader]="uploader" accept="image/">
+
+          <div class="dz-default dz-message"><span translate>FILE_MANAGER.LABEL_INPUT_FILE</span></div>
+          <div class="dz-preview dz-file-preview dz-error dz-complete" *ngFor="let file of fileUploadQueue">
+            <div class="dz-details">
+              <div class="dz-size"><span><strong>{{file.size}}</strong></span></div>
+              <div class="dz-filename"><span>{{file.name}}</span></div>
+            </div>
+            <div class="dz-progress" *ngIf="!file.errorMsg || file.errorMsg.length === 0">
+              <span class="dz-upload">
+                <progressbar class="progress-striped active" [value]="file.progress" type="success">
+                  {{file.progress}} %
+                </progressbar>
+              </span>
+            </div>
+            <div class="dz-error-message" *ngIf="file.errorMsg && file.errorMsg.length > 0">
+              <span>
+                {{file.errorMsg}}
+              </span>
+            </div>
+            <div class="dz-success-mark">
+
+            </div>
+            <div class="dz-error-mark">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </tab>
+  </tabset>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-sm btn-success"
+    [disabled]="(!isAllowSelectMultiple && !checkSelectOne()) || !checkSelect() || isSelectToDelete" (click)="accept()"
+    translate>
+    <i class="material-icons">done</i>
+    FILE_MANAGER.BTN_ACCEPT
+  </button>
+  <button type="button" class="btn btn-sm btn-danger" (click)="decline()" translate>
+    <i class="material-icons">clear</i>
+    FILE_MANAGER.BTN_DECLINE
+  </button>
+</div>

@@ -1,0 +1,74 @@
+<div class="page-header row no-gutters py-4">
+  <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+    <span class="text-uppercase page-subtitle" translate>{{headerInfo.subtitle}}</span>
+    <h3 class="page-title" translate>{{headerInfo.title}}</h3>
+  </div>
+</div>
+
+<div class="dataTables_wrapper no-footer">
+  <div class="dataTables_actions">
+    <button *ngIf="!hideAdd" class="btn btn-sm btn-success mr-1" (click)="add()"><i class="material-icons mr-1">add</i>
+      <span translate>GRID_VIEW.BUTTON_ADD</span></button>
+    <button *ngIf="!hideDelete" class="btn btn-sm btn-danger mr-1" [disabled]="checkDisableDeleteButton()"
+      (click)="delete()"><i class="material-icons mr-1">clear</i>
+      <span translate>GRID_VIEW.BUTTON_DELETE</span></button>
+    <button class="btn btn-sm btn-info mr-1" (click)="reload()"><i class="material-icons mr-1">refresh</i> <span
+        translate>GRID_VIEW.BUTTON_RELOAD</span></button>
+    <button *ngIf="showImport" (click)="import()" class="btn btn-sm btn-outline-secondary mr-1" translate><i
+        class="fas fa-file-excel mr-1"></i>GRID_VIEW.BUTTON_IMPORTEXCEL</button>
+    <button *ngIf="showImport" (click)="export()" class="btn btn-sm btn-outline-secondary mr-1" translate><i
+        class="fas fa-file-excel mr-1"></i>GRID_VIEW.BUTTON_EXPORTEXCEL</button>
+    <button *ngIf="showChangeView" (click)="changeView()" class="btn btn-sm btn-dark mr-1 float-right" translate><i
+        class="fas fa-exchange-alt"></i></button>
+  </div>
+  <!-- <div class="dataTables_filters">
+
+    </div> -->
+  <div *ngIf="isShowGridView">
+    <div *ngIf="!gridViewColumns || gridViewColumns.length == 0" class="grid-spinner text-center">
+      <div class="spinner-border spinner-border-sm text-info" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <ng-container *ngIf="gridViewColumns && gridViewColumns.length > 0" #gridView>
+      <table class="transaction-history d-none dataTable no-footer dtr-inline" role="grid">
+        <thead>
+          <tr role="row">
+            <th width="50" class="text-center">
+              <label class="custom-control material-checkbox">
+                <input type="checkbox" class="material-control-input" [(ngModel)]="isSelectedAll" (change)="checkAll()">
+                <span class="material-control-indicator"></span>
+                <span class="material-control-description"></span>
+              </label>
+            </th>
+            <th class="{{sortingClass(col)}}" *ngFor="let col of gridViewColumns; trackBy: gridViewTrackByFn"
+              (click)="sortBy(col)" [width]="col.width" translate>{{col.nameDict}}
+            </th>
+          </tr>
+        </thead>
+        <thead app-filter-control [dataColumns]="gridViewColumns" (onFilter)="onFilter($event)">
+        </thead>
+        <tbody>
+          <tr role="row" *ngFor="let item of gridViewData; trackBy: gridViewTrackByFn" (click)="edit(item.id)">
+            <td class="text-center" (click)="$event.stopPropagation()">
+              <label class="custom-control material-checkbox">
+                <input type="checkbox" class="material-control-input" [(ngModel)]="item.isSelected">
+                <span class="material-control-indicator"></span>
+                <span class="material-control-description"></span>
+              </label>
+            </td>
+            <td class="pointer" *ngFor="let col of gridViewColumns; trackBy: gridViewTrackByFn">
+              <app-value-by-data-type [dataTypeCode]="col.dataTypeCode" [value]="item[col.sqlName]">
+              </app-value-by-data-type>
+            </td>
+          </tr>
+          <tr *ngIf="gridViewData.length === 0">
+            <td class="text-center" [colSpan]="gridViewColumns.length + 1" translate>GRID_VIEW.NO_DATA</td>
+          </tr>
+        </tbody>
+      </table>
+      <app-pagination [pagingInfo]="pagingInfo" (pageChanged)="pageChanged($event)" [(ngModel)]="pagingInfo.pageIndex">
+      </app-pagination>
+    </ng-container>
+  </div>
+</div>

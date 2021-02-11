@@ -1,0 +1,1203 @@
+{
+  "AVATAR_CHOOSER": {
+    "CHOOSE_FILE": "Choose image",
+    "DELETE": "Clear"
+  },
+  "BANNER": {
+    "SUBTITLE": "Website",
+    "TH_CODE": "Code",
+    "TH_NAME": "Name",
+    "TITLE": "Banner"
+  },
+  "BANNER_ADD": {
+    "BUTTON_ADD_BANNER": "Add banner",
+    "BUTTON_ADD_IMAGE": "Pick image",
+    "BUTTON_DELETE": "Delete",
+    "LABEL_ALT": "Alt",
+    "LABEL_CODE": "Code",
+    "LABEL_LINK": "Link",
+    "LABEL_NAME": "Name",
+    "LABEL_TITLE": "Title",
+    "SUBTITLE": "Banner",
+    "TITLE": "Detail",
+    "TITLE_IMAGE": "Images",
+    "TITLE_INFO": "Banner informations"
+  },
+  "BLOG": {
+    "BLOG_CATEGORY": "Blog",
+    "SUBTITLE": "Website",
+    "TH_AUTHOR": "Author",
+    "TH_DATE": "Date",
+    "TH_IMAGE": "Image",
+    "TH_TITLE": "Title",
+    "TITLE": "Blogs"
+  },
+  "BLOG_ADD": {
+    "LABEL_AUTHOR": "Author",
+    "LABEL_CATEGORY": "Blog",
+    "LABEL_CONTENT": "Content",
+    "LABEL_DESC": "Description",
+    "LABEL_STATUS": "Visible",
+    "LABEL_TITLE": "Title",
+    "SUBTITLE": "Blogs",
+    "TITLE": "Detail",
+    "TITLE_AVATAR": "Avatar",
+    "TITLE_BLOG_INFO": "Blog infomations",
+    "TITLE_SOURCE": "Other informations",
+    "TITLE_STATUS": "Status"
+  },
+  "BLOG_CATEGORY": {
+    "SUBTITLE": "WEBSITE",
+    "TH_TITLE": "Title",
+    "TH_VISIBBLE": "Visible",
+    "TITLE": "Blog Categories"
+  },
+  "BLOG_CATEGORY_ADD": {
+    "LABEL_DESC": "Description",
+    "LABEL_STATUS": "Visible",
+    "LABEL_STATUS_HOME": "Show Home",
+    "LABEL_TITLE": "Name",
+    "SUBTITLE": "Blog Categories",
+    "TITLE": "Detail",
+    "TITLE_STATUS": "Status"
+  },
+  "BUS": {
+    "ATTEND": "Attendance status",
+    "END_TIME": "End time",
+    "MAP": "Map",
+    "NOT_PICKED": "Not picked up",
+    "PICKED": "Picked up",
+    "PROBLEMS": "Problem(s)",
+    "ROAD": "Road",
+    "SELECT": "Select Bus",
+    "START_TIME": "Start time",
+    "STATUS": {
+      "FINISH": "Finished",
+      "LABEL": "Status",
+      "OFF": "Off",
+      "ON_GOING": "On going"
+    },
+    "SUBTITLE": "School Bus",
+    "TH_CARRIAGEWAY": "CarraigeWay",
+    "TH_DATE": "Date",
+    "TH_DESCRIPTION": "Description",
+    "TH_LICENSE_PLATE": "License Plate",
+    "TH_NAME": "Bus Name",
+    "TH_PROBLEMS": "Problems",
+    "TH_SENDER": "Sender",
+    "TITLE": "Bus",
+    "TOTAL_STUDENT": "Total number of students",
+    "TRACK": "Bus Tracking"
+  },
+  "BUS_ADD": {
+    "AMOUNT_SEAT": "Amount seat",
+    "BACKGROUND": "Backgound",
+    "INFORMATION": "Bus Information",
+    "LINCENSE_PLATE": "Lincense plate",
+    "NAME": "Bus Name"
+  },
+  "CARRIAGE_WAY": {
+    "SUBTITLE": "School Bus",
+    "TH_NAME": "Name",
+    "TITLE": "Carriage Way"
+  },
+  "CARRIAGE_WAY_ADD": {
+    "INFORMATION": "Carriage Way Information",
+    "LABEL_ADD_DRIVER": "Add",
+    "LABEL_ADD_HELPER": "Add",
+    "LABEL_ADD_LOCATION": "Add Location",
+    "LABEL_ADD_LOCATION_TITLE": "Add New Location",
+    "LABEL_BUS": "Bus",
+    "LABEL_CHECK_IN_LOCATION": "Check In Location",
+    "LABEL_CHECK_OUT_LOCATION": "Check Out Location",
+    "LABEL_CREATE_WITH_ALL_STUDENT": "Create Location With All Student In Carriage Way",
+    "LABEL_DRIVER": "Driver",
+    "LABEL_END_TIME": "End Time",
+    "LABEL_HELPER": "Helper",
+    "LABEL_LAT": "Latitude",
+    "LABEL_LONG": "Longitude",
+    "LABEL_NAME": "Name",
+    "LABEL_NAME_LOCATION": "Name Location",
+    "LABEL_REMOVE": "Remove",
+    "LABEL_SELECT_DRIVER": "Select Driver",
+    "LABEL_SELECT_HELPER": "Select Helper",
+    "LABEL_START_TIME": "Start Time",
+    "LABEL_SUBTITLE": "Subtitle",
+    "LABEL_TOTAL_STUDENT": "Total Student",
+    "LABEL_UPDATE": "Update",
+    "LABEL_UPDATE_STUDENT": "Update Sutent In Carriage Way",
+    "STUDENT_LIST_LOCATION": "List Student In Location",
+    "TH_NAME": "Name",
+    "TH_PHONE": "Phone"
+  },
+  "CHILDREN_DISCOUNT": {
+    "SUBTITLE": "Fee",
+    "TITLE": "Children Discount"
+  },
+  "CLASS": {
+    "SUBTITLE": "School",
+    "TH_CLASS_GROUP": "Class Group",
+    "TH_CODE": "Class No",
+    "TH_NAME": "Name",
+    "TITLE": "Class"
+  },
+  "CLASS_ADD": {
+    "INFORMATION": "Class Information",
+    "LABEL_ADD_STUDENT": "Add Student",
+    "LABEL_ADD_TEACHER": "Add",
+    "LABEL_BACKGROUND": "Background",
+    "LABEL_CLASS_GROUP": "Class Group",
+    "LABEL_CODE": "Code",
+    "LABEL_NAME": "Class Name",
+    "LABEL_SAVE": "Save",
+    "LABEL_STUDENT_ALL": "All Student",
+    "LABEL_STUDENT_IN_CLASS": "Students in Class",
+    "LABEL_STUDENT_LIST": "Student List",
+    "LABEL_TEACHER": "Teacher",
+    "LABEL_TEACHER_NAME": "Name",
+    "LABEL_TEACHER_PHONE": "Phone"
+  },
+  "CLASS_GROUP": {
+    "SUBTITLE": "School",
+    "TH_DESC": "Description",
+    "TH_NAME": "Name",
+    "TITLE": "Class Group"
+  },
+  "CLASS_SCHEDULE": {
+    "SUBTITLE": "School",
+    "TITLE": "Class Schedule"
+  },
+  "COLUMN_ADD": {
+    "BUTTON_SAVE": "Save",
+    "DATA_TYPE": "Data type",
+    "DISPLAY_COLUMN": "Column display",
+    "ENUM": "Enum",
+    "ISFOREIGN_KEY": "Is foreign key",
+    "ISPRIMARY_KEY": "Is primary key",
+    "NAME": "Name",
+    "NAME_DICT": "Translation key",
+    "SEARCHABLE": "Searchable",
+    "SORTABLE": "Sortable",
+    "SQLNAME": "SqlName",
+    "SQL_SCRIPT": "Sql script",
+    "TABLE": "Table",
+    "TABLE_ALIAS": "Table alias",
+    "VALUE_COLUMN": "Column value"
+  },
+  "COMMENT": {
+    "SUBTITLE": "School",
+    "TH_CHILD": "Student",
+    "TH_CONTENT": "Content",
+    "TH_DATE": "Date",
+    "TH_TEACHER": "Teacher",
+    "TITLE": "Comment Of Teacher"
+  },
+  "COMMENT_TEMPLATE": {
+    "SUBTITLE": "School",
+    "TH_CONTENT": "Content",
+    "TH_TYPE": "Type",
+    "TITLE": "Comment Template"
+  },
+  "COMMON": {
+    "CRITIAL_ERROR": "Critial error",
+    "DATA_NOT_FOUND": "Data not found!",
+    "MESSAGE_ADD_SUCCESS": "Add new success",
+    "MESSAGE_EDIT_PROFILE_ERROR": "Old password is not correct.",
+    "MESSAGE_UPDATE_SUCCESS": "Update successful",
+    "MESSAGE_DELETE_SUCCESS": "Delete successful",
+    "TOAST_TITLE_ERROR": "Error",
+    "TOAST_TITLE_INFO": "Information",
+    "TOAST_TITLE_SUCCESS": "Success",
+    "TOAST_TITLE_WARNING": "Warning"
+  },
+  "CONFIG": {
+    "SUBTITLE": "Admin",
+    "TITLE": "Config"
+  },
+  "CONFIRM_DIALOG": {
+    "BUTTON_ACCEPT": "Accept",
+    "BUTTON_DECLINE": "Decline",
+    "CONFIRM_SAVE_MESSAGE": "Do you want to save this data?",
+    "CONFRIM_DELETE_MESSAGE": "Do you want to delete this data?",
+    "TITLE": "Confirmation"
+  },
+  "CONTACT": {
+    "SUBTITLE": "Admin",
+    "TH_ADDRESS": "Address",
+    "TH_NAME": "Name",
+    "TH_PHONE": "Phone",
+    "TH_VISIBLE": "Visible",
+    "TITLE": "Contact"
+  },
+  "CONTACT_ADD": {
+    "LABEL_ADDRESS": "Address",
+    "LABEL_DISTRICT": "District",
+    "LABEL_HEAD_OFFICE": "Head office",
+    "LABEL_LAT": "Latitude",
+    "LABEL_LONG": "Longtitude",
+    "LABEL_PHONE": "Phone",
+    "LABEL_PROVINCE": "Province",
+    "LABEL_STATUS": "Visible",
+    "LABEL_WARD": "Ward",
+    "SUBTITLE": "CONTACT",
+    "TITLE": "Detail",
+    "TITLE_INFO": "Contact information",
+    "TITLE_STATUS": "Status"
+  },
+  "COURSE": {
+    "INFORMATION": "Course Infomation",
+    "TH_CODE": "Code",
+    "TH_DURATION": "Duration",
+    "TH_LEVEL": "Level",
+    "TH_NAME": "Name",
+    "TH_PRICE": "Price",
+    "TH_PROGRAM": "Program"
+  },
+  "CUSTOMER": {
+    "SUBTITLE": "Admin",
+    "TH_EMAIL": "Email",
+    "TH_FULL_NAME": "Fullname",
+    "TH_PHONE": "Phone",
+    "TITLE": "Customer"
+  },
+  "CUSTOMER_ADD": {
+    "LABEL_ADDRESS": "Address",
+    "LABEL_DISTRICT": "District",
+    "LABEL_EMAIL": "Email",
+    "LABEL_NAME": "Fullname",
+    "LABEL_PASS": "Password",
+    "LABEL_PHONE": "Phone",
+    "LABEL_PROVINCE": "Province",
+    "LABEL_WARD": "Ward",
+    "SUBTITLE": "CUSTOMER",
+    "TITLE": "Detail",
+    "TITLE_INFO": "Customer detail"
+  },
+  "CUSTOMER_CONTACT": {
+    "CONACT_NAME": "Contact name",
+    "EMAIL": "Email",
+    "SUBTITLE": "Admin",
+    "TH_TITLE": "Title",
+    "TITLE": "Customer Contact"
+  },
+  "CUSTOMER_CONTACT_ADD": {
+    "LABEL_CONTENT": "Content",
+    "LABEL_C_N": "Contact name",
+    "LABEL_DATE": "Date",
+    "LABEL_EMAIL": "Email",
+    "LABEL_TITLE": "Tiêu đề",
+    "SUBTITLE": "CUSTOMER CONTACT",
+    "TITLE": "Detail",
+    "TITLE_INFO": "Chi tiết liên hệ"
+  },
+  "DASHBOARD": {
+    "LABEL_BUS": "Bus",
+    "LABEL_CARRIAGE_WAY": "Carriage Way",
+    "LABEL_CONTACT_PARENT": "Feedback From Parents",
+    "LABEL_HELPER": "Helper",
+    "LABEL_RELOAD": "Reload",
+    "LABEL_SETTING": "Setting",
+    "LABEL_STUDENT_FINISH": "Finish",
+    "LABEL_STUDENT_IN_BUS": "Student In Bus",
+    "LABEL_STUDENT_OFF": "Student Off",
+    "LABEL_STUDENT_WAIT_BUS": "Waiting",
+    "LABEL_TOTAL_STUDENT": "Total Student",
+    "SUBTITLE": "Admin",
+    "TH_BUS": "Bus",
+    "TH_CARRIAGE_WAY": "Carriage Way",
+    "TH_CONTENT": "Content",
+    "TH_DETAIL": "Detail",
+    "TH_DRIVER": "Driver",
+    "TH_HELPER": "Helper",
+    "TH_HISTORY": "History Activity",
+    "TH_PARENT": "Parent",
+    "TH_SEND_DATE": "Date",
+    "TH_STUDENT": "Student",
+    "TH_STUDENT_FINISH": "Student Finish",
+    "TH_TIME": "Time",
+    "TITLE": "Overview"
+  },
+  "DATA_SERVICE": {
+    "SUBTITLE": "ADMIN",
+    "TH_DATA": "Data",
+    "TH_IMAGE": "Image",
+    "TH_IVISIBLE": "Visible",
+    "TH_PRICE": "Price",
+    "TH_TITLE": "Data name",
+    "TITLE": "Data"
+  },
+  "DATA_SERVICE_ADD": {
+    "LABEL_AUTHOR": "Author",
+    "LABEL_CATEGORY": "Category",
+    "LABEL_CODE": "Code",
+    "LABEL_CONTENT": "Content",
+    "LABEL_DATA": "Data",
+    "LABEL_DESC": "Description",
+    "LABEL_PRICE": "Price",
+    "LABEL_STATUS": "Visible",
+    "LABEL_TITLE": "Data name",
+    "SUBTITLE": "DATA SERVICE",
+    "TITLE": "Detail",
+    "TITLE_AVATAR": "Avatar",
+    "TITLE_DATA_INFO": "Data infomations",
+    "TITLE_SOURCE": "Type",
+    "TITLE_STATUS": "Status"
+  },
+  "ENUM": {
+    "SUBTITLE": "Admin",
+    "TH_CODE": "Code",
+    "TH_NAME": "Name",
+    "TITLE": "Common List"
+  },
+  "ENUM_ADD": {
+    "CODE": "Cod",
+    "IMAGE": "Image",
+    "LIST": "List Values",
+    "NAME": "Name",
+    "SUBTITLE": "Common list",
+    "TITLE": "Detail",
+    "VALUE": "Value"
+  },
+  "EVENT": {
+    "INFORMATION": "Event Infomation",
+    "SUBTITLE": "Event Management",
+    "TH_CAPACITY": "Capacity",
+    "TH_CLASS": "Class",
+    "TH_CONTENT": "Content",
+    "TH_DESCRIPTION": "Description",
+    "TH_END_DATE": "End Date",
+    "TH_END_TIME": "End Time",
+    "TH_IMAGE": "Image",
+    "TH_NAME": "Name",
+    "TH_PRICE": "Price",
+    "TH_START_DATE": "Start Date",
+    "TH_START_TIME": "Start Time",
+    "TH_TYPE": "Send to",
+    "TITLE": "List Event"
+  },
+  "EVENT_ADD": {
+    "SUBTITLE": "Event",
+    "TITLE": "Detail"
+  },
+  "EXTRACURRICULAR_ACTIVITY_ADD": {
+    "SUBTITLE": "Admin",
+    "TITLE": "Extracurricular Activities"
+  },
+  "FEE": {
+    "SUBTITLE": "FEE MANAGEMENT",
+    "TITLE": "Fee List"
+  },
+  "FEE_LATE": {
+    "SUBTITLE": "Fee",
+    "TH_END_TIME": "End Time",
+    "TH_NAME": "Name",
+    "TH_PRICE": "Price",
+    "TH_START_TIME": "Start Time",
+    "TITLE": "Fee Pickup Late"
+  },
+  "FILE_MANAGER": {
+    "BTN_ACCEPT": "Accept",
+    "BTN_DECLINE": "Decline",
+    "DIRECTORIES": "DIRECTORIES",
+    "ERROR_FILE_TOO_BIG": "File is too big ([FILE_SIZE]). Max filesize: [MAX_SIZE].",
+    "IMAGES": "IMAGES",
+    "LABEL_INPUT_FILE": "Drop files here or click to upload",
+    "TAB_IMAGES": "Images",
+    "TAB_UPLOAD": "Upload",
+    "TITLE": "Image picker"
+  },
+  "GRID_VIEW": {
+    "BUTTON_ADD": "Add",
+    "BUTTON_CHANGE_VIEW": "Change view",
+    "BUTTON_DELETE": "Delete",
+    "BUTTON_RELOAD": "Reload",
+    "BUTTON_BACK": "Back",
+    "BUTTON_DOWNLOADTEMPLATE": "Example template",
+    "BUTTON_IMPORTEXCEL": "Import Excel",
+    "BUTTON_EXPORTEXCEL": "Export Excel",
+    "NO_DATA": "Data not found!",
+    "PAGING_LABEL_ENTRIES": "entries",
+    "PAGING_LABEL_OF": "of",
+    "PAGING_LABEL_SHOW": "Showing",
+    "PAGING_LABEL_TO": "to"
+  },
+  "LOGIN": {
+    "BUTTON_SIGN_IN": "LOGIN",
+    "LABEL_CREATE_NEW_ACCOUNT": "Create new account?",
+    "LABEL_USER": "User name",
+    "LABEL_FORGOT_PASSWORD": "Forgot your password?",
+    "LABEL_PASSWORD": "Password",
+    "LABEL_REMEMBER": "Remember me",
+    "TITLE": "LOGIN"
+  },
+  "MENU": {
+    "SUBTITLE": "Admin",
+    "TITLE": "Menu"
+  },
+  "MENU_ADD": {
+    "HREF": "Href",
+    "ICON": "Icon",
+    "IS_ACTIVED": "Is Actived",
+    "MODULE": "Module",
+    "NAME": "Name",
+    "PARENT_ID": "Parent",
+    "POSITION": "Position",
+    "SUBTITLE": "Menu",
+    "TITLE": "Detail",
+    "TITLE_DICT": "Title Dict",
+    "VIEW": "View"
+  },
+  "MESSAGE": {
+    "CREATED_DATE": "Sent Date",
+    "IS_FINISH": "Finished",
+    "PHONE": "Phone Number",
+    "SENDER": "Sender",
+    "SUBTITLE": "Schoo",
+    "TITLE": "Message"
+  },
+  "MESSAGE_ADD": {
+    "LABEL_BUS_NAME": "Bus",
+    "LABEL_CANCEL": "Cancel Process",
+    "LABEL_CARRIAGE_WAY_NAME": "Carriage Way",
+    "LABEL_DETAILS": "Detail",
+    "LABEL_DETAILS_BUS": "Carriage Way Information",
+    "LABEL_DETAILS_STUDENT": "Student Information",
+    "LABEL_DRIVER": "Driver",
+    "LABEL_HELPER": "Helper",
+    "LABEL_PARENT": "Parent",
+    "LABEL_PHONE_CONTACT": "Phone Contact",
+    "LABEL_PROCESSED": "Processed",
+    "LABEL_SENT_DATE": "Sent Date",
+    "LABEL_STATUS": "Status",
+    "LABEL_WAITING_PROCESS": "Waiting Process"
+  },
+  "MODULE": {
+    "SUBTITLE": "Admin",
+    "TITLE": "Module"
+  },
+  "MODULE_ADD": {
+    "ACTIVED": "Actived",
+    "CODE": "Code",
+    "NAME": "Name",
+    "SUBTITLE": "Module",
+    "TITLE": "Detail"
+  },
+  "NAVIGATION": {
+    "ADMIN": "Admin",
+    "ALBUM": "Album Management",
+    "BANNER": "Banner",
+    "BLOG": "Blog",
+    "BLOG_CATE": "Blog Categories",
+    "BUS": "Bus Management",
+    "BUS_CHECKIN": "School Bus Management",
+    "BUS_PROBLEM": "Problems On The Bus",
+    "CARRIAGE_WAY": "Carriage Way Management",
+    "CHECK_IN_OUT_ON_BUS": "Check In / Check Out On Bus",
+    "CHILD_DISCOUNT": "Child Discount",
+    "CHILD_OFF": "Sabbatical Leave Management",
+    "CLASS": "Class Management",
+    "CLASS_GROUP": "Class Group Management",
+    "CLASS_OT": "Class Overtime Management",
+    "COMMENT": "Comment Management",
+    "COMMENT_TEMPLATE": "Comment Template Management",
+    "COMMON_LIST": "Common List",
+    "CONFIG": "Config",
+    "CONTACT": "Contact",
+    "COURSE": "Course Management",
+    "CUSTOMER": "Customer",
+    "CUSTOMER_CONTACT": "Customer Contact",
+    "DATA_SERVICE": "Data",
+    "EVENT": "Event Management",
+    "FEE_LATE": "Fee Pick Up Late Management",
+    "FEE_LIST": "Fee List",
+    "FEE_MANAGEMENT": "Fee Management",
+    "HISTORY_RATING": "Rating History",
+    "MENU": "Menu",
+    "MENU_FOOD": "Menu Food Management",
+    "MESSAGE": "Message Management",
+    "MODULE": "Module",
+    "ORDER": "Order",
+    "PARENT_CONECT": "Parent Connect Management",
+    "PARENT_REPORT": "Parent Statistics",
+    "PERMISSION": "Permission",
+    "PRODUCT": "Product",
+    "PROGRAM": "Program Management",
+    "RECRUITMENT": "Recruitment",
+    "REPORT": "Reports And Statistics",
+    "REPORT_CHECKIN": "Report Checkin",
+    "REPORT_CHECK_IN_LATE": "Report Checkin Late",
+    "REPORT_REGISTER_DINNER": "Report Register Dinner",
+    "SCHOOL": "School",
+    "SCHOOL_HOLIDAY": "Holiday Management",
+    "SCHOOL_MANAGER": "School Management",
+    "SCHOOL_START_END_DAY_IN_WEEK": "School Day Of The Week Setting",
+    "SCHOOL_YEAR": "School Year Management",
+    "SINGLE_PAGE": "Single Page",
+    "STUDENT": "Student Management",
+    "SUBJECT": "Subject Management",
+    "TABLE": "Table",
+    "TRACKING_BUS": "Tracking Bus",
+    "USER": "Manage Account",
+    "VIEW": "View",
+    "WEBSITE": "Website",
+    "WEBSITE_MENU": "Menu",
+    "CATEGORY": "Category",
+    "AUTHOR": "Manage Author",
+    "PUBLISHER": "Manage Publisher",
+    "CATALOG": "Manage Catalog",
+    "MEMBERGROUP": "Manage Member Group",
+    "RACK": "Manage Rack",
+    "FORMAT": "Manage Format",
+    "BOOK": "Book",
+    "BOOKITEM": "Manage Book Item",
+    "BOOKCHILD": "Manage Book",
+    "LANGUAGE": "Manage Language",
+    "STATUS": "Manage Status",
+    "MEMBER": "Member",
+    "MEMBERCHILD": "Manage Member",
+    "BOOKLENDING":"Book Lending",
+    "BOOKLENDINGPOLICY":"Manage Policy"
+
+
+  },
+  "NAV_BAR": {
+    "LOGOUT": "Logout",
+    "PROFILE": "Profile"
+  },
+  "ORDER": {
+    "CUSTOMER": "Customer",
+    "ORDER_DATE": "Date",
+    "SUBTITLE": "Admin",
+    "TH_VISIBLE": "Visible",
+    "TITLE": "Order",
+    "TOTAL_AMOUNT": "Total amount"
+  },
+  "ORDER_ADD": {
+    "LABEL_ADDRESS": "Address",
+    "LABEL_CONTACT": "Store",
+    "LABEL_CUSTOMER_NAME": "Customer name",
+    "LABEL_DISTRICT": "District",
+    "LABEL_EMAIL": "Email",
+    "LABEL_NOTE": "Note",
+    "LABEL_ORDER_DATE": "Order date",
+    "LABEL_PHONE": "Phone",
+    "LABEL_PROVINCE": "Province",
+    "LABEL_TOTAL_AMOUNT": "Total amount:",
+    "LABEL_WARD": "Ward",
+    "SUBTITLE": "Order",
+    "TH_AMOUNT": "Amount",
+    "TH_IMAGE": "Image",
+    "TH_PRICE": "Unit price",
+    "TH_PRODUCT_NAME": "Product name",
+    "TH_QUANTITY": "Quantity",
+    "TITLE": "Detail",
+    "TITLE_CUSTOMER": "Customer informations",
+    "TITLE_DETAIL": "Order detail",
+    "TITLE_STATUS": "Status"
+  },
+  "PAYMENT_TERM": {
+    "LABEL_ISPAYONETIME": "Pay one time",
+    "LABEL_ISPAYPERMONTH": "Per month",
+    "PAYMENT_TERM": "PAYMENT TERM",
+    "TH_AVATAR": "Avatar",
+    "TH_BIRTHDAY": "Birthday",
+    "TH_CLASS": "Class",
+    "TH_CLASS_GROUP": "Class Group",
+    "TH_CODE": "Child Code",
+    "TH_DATE_EXP": "Exp Date",
+    "TH_DATE_REGISTER": "Date Register",
+    "TH_GENDER": "Gender",
+    "TH_ISCOUNTONINVOICE": "COUNT ON INVOICE",
+    "TH_ISPAYATMONTH": "Pay at month",
+    "TH_ISREFUNDWHENOFF": "REFUND WHEN OFF",
+    "TH_NAME": "Name",
+    "TH_NICKNAME": "Nickname",
+    "TH_PARENT": "Parent",
+    "TH_SERVICE": "Service",
+    "TH_STATUS": "Status",
+    "TH_TIMEDOWN": "Time Down",
+    "TH_TIMEUP": "Time Up",
+    "TH_TYPE_SERVICE": "Type Service",
+    "TITLE": "List Student"
+  },
+  "PERMISSION": {
+    "SUBTITLE": "Admin",
+    "TITLE": "Permission"
+  },
+  "PERMISSION_ADD": {
+    "CODE": "Code",
+    "IS_ACTIVED": "Actived",
+    "NAME": "Name",
+    "PERMISSION_ADD": "Add",
+    "PERMISSION_DELETE": "Delete",
+    "PERMISSION_EDIT": "Edit",
+    "PERMISSION_VIEW": "View",
+    "SUBTITLE": "Permission",
+    "TH_FULL_CONTROL": "Full control",
+    "TH_MODULE": "Module",
+    "TITLE": "Detail",
+    "TITLE_PERMISSION_DETAIL": "Permission Details",
+    "TITLE_ROLE_INFO": "Role Information",
+    "TYPE": "Type"
+  },
+  "PROBLEM_TEMPLATE": {
+    "TH_DESC": "Time",
+    "TH_NAME": "Problem",
+    "TITLE": "Problem Template List",
+    "UNIT_MINUTE": "Minute"
+  },
+  "PROBLEM_TEMPLATE_ADD": {
+    "SUBTITLE": "Problem Template",
+    "TITLE": "Update Problem Template"
+  },
+  "PRODUCT": {
+    "SUBTITLE": "Admin",
+    "TH_IMAGE": "Image",
+    "TH_TITLE": "Product name",
+    "TH_VISIBLE": "Visible",
+    "TITLE": "Products"
+  },
+  "PRODUCT_ADD": {
+    "BUTTON_ADD_DESC": "Add",
+    "BUTTON_REMOVE_IMG": "Delete",
+    "LABEL_ADD_IMAGE": "Add image",
+    "LABEL_BRAND": "Brand",
+    "LABEL_CONTENT": "Content",
+    "LABEL_DESC": "Description",
+    "LABEL_DES_TITLE": "Description name",
+    "LABEL_DISPLAY_SIZE": "Display size",
+    "LABEL_IS_HOT": "Is Hot",
+    "LABEL_IS_NEW": "New",
+    "LABEL_IS_SALE": "Is Sale",
+    "LABEL_NAME": "Name",
+    "LABEL_OS": "Operater system",
+    "LABEL_PRICE": "Price",
+    "LABEL_PRICE_COMPARE": "Price comparison",
+    "LABEL_PRODUCT_TYPE": "Product type",
+    "LABEL_STATUS": "Visible",
+    "PLACEHOLDER_ADD_ATT": "Add value",
+    "PLACEHOLDER_ATT": "Value",
+    "SUBTITLE": "PRODUCT",
+    "TITLE": "DETAILS",
+    "TITLE_ATTRIBUTE": "Product attributes",
+    "TITLE_AVATAR": "Avatar",
+    "TITLE_DESCRIPTION": "Descriptions",
+    "TITLE_IMAGE": "Images",
+    "TITLE_MENU": "Menu",
+    "TITLE_PRODUCT_INFO": "PRODUCT INFORMATIONS",
+    "TITLE_STATUS": "Status",
+    "TITLE_TYPE": "Type"
+  },
+  "PROFILE": {
+    "CNEWPASSWORD": "Confirm new password",
+    "EMAIL": "Email",
+    "NAME": "Name",
+    "NEWPASSWORD": "New Password",
+    "PASSWORD": "Old Password",
+    "PHONE": "Phone Number",
+    "SUBTITLE": "Profile",
+    "TITLE": "Detail",
+    "TITLE_CREDENTIAL": "Login Informations",
+    "TITLE_ROLE": "Roles",
+    "TITLE_USER_INFO": "User Informations",
+    "USER_NAME": "User Name",
+    "GENDER": "Gender",
+    "ADDRESS": "Address"
+  },
+  "PROGRAM": {
+    "SUBTITLE": "Program Management",
+    "TH_NAME": "Name",
+    "TH_STATUS": "Status",
+    "TITLE": "List Program"
+  },
+  "RATING": {
+    "RATING_HISTORY": "Rating History",
+    "RATING_TITLE": "Report Rating",
+    "STAFF_SUBTITLE": "Rating Description Staff",
+    "STAFF_TITLE": "List Rating Staff"
+  },
+  "RECEIPT": {
+    "CHILD": "Child",
+    "CODE": "Code",
+    "CONFIRM_PAID": "Confirm paid",
+    "CONTENT_CUSTOM": "Content Custom",
+    "DATE": "Created Date",
+    "MONTH": "Month",
+    "NOTE": "Note",
+    "PAID": "Paid",
+    "PAYMENT_ABSENTDAY": "Absent Count",
+    "PAYMENT_TYPE": "Payment Type",
+    "SUBTITLE": "Receipt",
+    "TH_DATE": "Receipt date",
+    "TH_PAID": "Paid",
+    "TH_PAYMENT_TYPE": "Payment Type",
+    "TH_SCHOOL_YEAR": "School year",
+    "TH_TOTAL_AMOUNT": "Total Amount",
+    "TITLE": "List Receipt",
+    "TOTAL_AMOUNT": "Total Amount"
+  },
+  "RECRUITMENT": {
+    "SUBTITLE": "Admin",
+    "TH_EXPIRE_DATE": "Expire date",
+    "TH_QUANTITY": "Quantity",
+    "TH_TITLE": "Title",
+    "TH_VISIBLE": "Visible",
+    "TITLE": "Recruitment"
+  },
+  "RECRUITMENT_ADD": {
+    "LABEL_CONTENT": "Content",
+    "LABEL_DESC": "Description",
+    "LABEL_EXPIRE_DATE": "Expire date",
+    "LABEL_QUANTITY": "Quantity",
+    "LABEL_STATUS": "Visible",
+    "LABEL_TITLE": "Title",
+    "SUBTITLE": "RECRUITMENT",
+    "TITLE": "Detail",
+    "TITLE_INFO": "Recruitment infomations",
+    "TITLE_STATUS": "Status"
+  },
+  "REPORT": {
+    "BUS_TITLE": "Report Bus",
+    "BUS_TRACKING_TITLE": "Tracking Bus",
+    "CLASS_TITLE": "Report Class",
+    "FEE_MANAGEMENT_TITLE": "Management Fee",
+    "FEE_TITLE": "Report Fee",
+    "LABEL_FILTER_BRANCH": "Branch",
+    "LABEL_FILTER_BUS": "Bus",
+    "LABEL_FILTER_BUSES": "Buses",
+    "LABEL_FILTER_CARRIAGEWAY": "CarriageWay",
+    "LABEL_FILTER_CLASS": "Class",
+    "LABEL_FILTER_CLASSGROUP": "Class Group",
+    "LABEL_FILTER_DATE": "Date",
+    "LABEL_FILTER_FROM_DATE": "From Date",
+    "LABEL_FILTER_MONTH": "Month",
+    "LABEL_FILTER_TO_DATE": "To Date",
+    "LABEL_FILTER_TYPE": "Type",
+    "LABEL_FILTER_TYPE_SERVICE": "Type Service",
+    "LIABILITIES_TITLE": "Report Liabilities",
+    "PROBLEM_TITLE": "Report Problem",
+    "RECEIPT_IN": "Receipt In",
+    "RECEIPT_OUT": "Receipt Out",
+    "REGISTER_SERVICE_TITLE": "Report Register Service",
+    "STUDENT_TITLE": "Report Student",
+    "SUBTITLE": "Report"
+  },
+  "REPORT_CHECKIN_CLASS": {
+    "DETAIL_DAY_WORK_15": "From Monday to Friday",
+    "DETAIL_DAY_WORK_16": "From Monday to Saturday"
+  },
+  "REPORT_CHECKIN_LATE": {
+    "SUBTITLE": "Report Checkin",
+    "TITLE": "Report Checkin Late"
+  },
+  "REPORT_REGISTER_DINNER": {
+    "SUBTITLE": "Report Checkin",
+    "TITLE": "Report Register Dinner"
+  },
+  "SCHOOL_ADD": {
+    "CONFIG": "Config",
+    "LABEL_CODE": "School Code",
+    "LABEL_NAME": "Name",
+    "LABEL_NO_DATA": "Data Not Found !",
+    "SCHOOL_AD": "School Ads",
+    "SCHOOL_AD_CONTENT": "Content",
+    "SCHOOL_AD_TITLE": "Title",
+    "SCHOOL_BRANCH": "School Branchs"
+  },
+  "SCHOOL_HOLIDAY": {
+    "SUBTITLE": "School",
+    "TH_DATE": "Date",
+    "TH_NAME": "Name",
+    "TITLE": "Holidays"
+  },
+  "SCHOOL_HOLIDAY_ADD": {
+    "LABEL_DATE": "Date",
+    "LABEL_NAME": "Name",
+    "SUBTITLE": "Holidays",
+    "TITLE": "Update Holiday"
+  },
+  "SCHOOL_START_END_DAY_IN_WEEK": {
+    "LABEL_END_DAY": "End Day In Week",
+    "LABEL_PICK_UP_TIME": "Pick Up Time Default",
+    "LABEL_START_DAY": "Start Day In Week",
+    "SUBTITLE": "School",
+    "TITLE": "School Day Of The Week"
+  },
+  "SCHOOL_YEAR": {
+    "SUBTITLE": "List School Year",
+    "TH_CURRENT_YEAR": "Current Year",
+    "TH_FROM_YEAR": "From Year",
+    "TH_TO_YEAR": "To Year",
+    "TITLE": "School Year"
+  },
+  "SCHOOL_YEAR_ADD": {
+    "CANCEL": "Cancel",
+    "CURRENT_YEAR": "Current Year",
+    "INFORMATION": "School Year Information",
+    "LABEL_FROM_YEAR": "From Year",
+    "LABEL_TO_YEAR": "To Year",
+    "SELECT_CURRENT_YEAR": "Select as the current year",
+    "STATUS": "Status"
+  },
+  "SEO": {
+    "CHARACTER_USED": "Character used",
+    "LABEL_META_KEYWORD": "Keywords",
+    "LABLE_META_DESC": "Description",
+    "LABLE_META_TITLE": "Title",
+    "PLACEHOLDER_ADD_KEYWORD": "Add keyword",
+    "PLACEHOLDER_KEYWORD": "Enter a new keyword",
+    "TITLE": "SEO"
+  },
+  "SINGLE_PAGE": {
+    "SUBTITLE": "WEBSITE",
+    "TH_BLOG_DATE": "Date",
+    "TH_TITLE": "Title",
+    "TH_VISIBLE": "Visible",
+    "TITLE": "Single Pages"
+  },
+  "SINGLE_PAGE_ADD": {
+    "LABEL_CONTENT": "Content",
+    "LABEL_DESC": "Description",
+    "LABEL_STATUS": "Visible",
+    "LABEL_TITLE": "Title",
+    "SUBTITLE": "SINGLE PAGE",
+    "TITLE": "Details",
+    "TITLE_AVATAR": "Avatar",
+    "TITLE_BLOG_INFO": "Blog infomations",
+    "TITLE_MENU": "Menu",
+    "TITLE_SOURCE": "Other informations",
+    "TITLE_STATUS": "Status"
+  },
+  "SLIDE_BAR": {
+    "TITLE": "CMS"
+  },
+  "STUDENT": {
+    "SUBTITLE": "School",
+    "TH_ADDRESS": "Address",
+    "TH_AGE": "Age",
+    "TH_AMOUNT": "Amount",
+    "TH_AVATAR": "Avatar",
+    "TH_BIRTHDAY": "Birthday",
+    "TH_CARD_CODE": "Card Code",
+    "TH_CHECKINED": "Checkin",
+    "TH_CHECKIN_LOCATION": "Checkin Location",
+    "TH_CHECKIN_TIME": "Time Up",
+    "TH_CHECKOUT_LOCATION": "Checkout Location",
+    "TH_CHECKOUT_TIME": "Time Down",
+    "TH_CLASS": "Class",
+    "TH_CLASS_GROUP": "Class Group",
+    "TH_CODE": "Child Code",
+    "TH_DATE_EXP": "Exp Date",
+    "TH_DATE_REGISTER": "Date Register",
+    "TH_GENDER": "Gender",
+    "TH_NAME": "Name",
+    "TH_NICKNAME": "Nickname",
+    "TH_OFF": "Absent",
+    "TH_PARENT": "Parent",
+    "TH_SERVICE": "Service",
+    "TH_STATUS": "Status",
+    "TH_TIMEDOWN": "Checkout Time",
+    "TH_TIMEUP": "Checkin Time",
+    "TH_TYPE_SERVICE": "Type Service",
+    "TITLE": "List Student"
+  },
+  "STUDENT_ADD": {
+    "INFORMATION": "Student Information",
+    "INFORMATION_PARENT": "Parent Information",
+    "LABEL_ADDRESS": "Address",
+    "LABEL_ADD_PARENT": "Add New Parent",
+    "LABEL_AGE": "Age",
+    "LABEL_AMOUNT": "Amount",
+    "LABEL_AVATAR": "Avatar",
+    "LABEL_BACKGROUND": "Background",
+    "LABEL_CARD_CODE": "Card Code",
+    "LABEL_CHECKIN_LOCATION": "Checkin Location",
+    "LABEL_CHECKIN_TIME": "Time Up",
+    "LABEL_CHECKOUT_LOCATION": "Checkout Location",
+    "LABEL_CHECKOUT_TIME": "Time Down",
+    "LABEL_CLASS": "Class",
+    "LABEL_CLASS_GROUP": "Class Group",
+    "LABEL_CODE": "Child Code",
+    "LABEL_CONNECT_CONFIRMED_PARENT": "Confirmed",
+    "LABEL_CONNECT_CONFIRM_PARENT": "Connect",
+    "LABEL_CONNECT_WAITING_PARENT": "Wait For Confirmation",
+    "LABEL_DATE_EXP": "Exp Date",
+    "LABEL_DATE_REGISTER": "Date Register",
+    "LABEL_DOB": "Birthday",
+    "LABEL_GENDER": "Gender",
+    "LABEL_NAME": "Name",
+    "LABEL_NICKNAME": "Nickname",
+    "LABEL_PARENT": "Parent",
+    "LABEL_PARENT_EMAIL": "Email",
+    "LABEL_PARENT_JOB": "Job",
+    "LABEL_PARENT_NAME": "Name",
+    "LABEL_PARENT_NO_DATA": "Not Found Data",
+    "LABEL_PARENT_PHONE": "Phone",
+    "LABEL_PARENT_RELATIONSHIP": "Relationship",
+    "LABEL_REMOVE_PARENT": "Remove",
+    "LABEL_SERVICE": "Service",
+    "LABEL_STATUS": "Status",
+    "LABEL_TYPE_SERVICE": "Type Service"
+  },
+  "SUBJECT_ADD": {
+    "SUBTITLE": "Admin",
+    "TITLE": "Subject"
+  },
+  "TABLE": {
+    "SUBTITLE": "Admin",
+    "TITLE": "Table"
+  },
+  "TABLE_ADD": {
+    "ALIAS": "Alias",
+    "COLUMN_TITLE": "COLUMNS",
+    "MODULE": "Module",
+    "NAME": "Name",
+    "SQLNAME": "SqlName",
+    "SUBTITLE": "Table",
+    "TABLE_TITLE": "TABLE INFORMATION",
+    "TITLE": "Detail",
+    "VALIDATE_ALIAS_EXISTED": "Alias is existed",
+    "VALIDATE_ALIAS_REQUIRE": "Alias is required",
+    "VALIDATE_MODULE_REQUIRE": "Module is required",
+    "VALIDATE_NAME_REQUIRE": "Name is required",
+    "VALIDATE_SQLNAME_REQUIRE": "SqlName is required"
+  },
+  "TOOL_BAR": {
+    "BUTTON_ADD": "Save",
+    "BUTTON_BACK": "Back",
+    "BUTTON_EDIT": "Edit"
+  },
+  "USER": {
+    "SUBTITLE": "Admin",
+    "TH_EMAIL": "Email",
+    "TH_NAME": "Name",
+    "TH_PHONE": "Phone",
+    "TITLE": "Users"
+  },
+  "USER_ADD": {
+    "EMAIL": "Email",
+    "NAME": "Name",
+    "PASSWORD": "Password",
+    "NEWPASSWORD": "New Password",
+    "PHONE": "Phone",
+    "RETYPE_PASSWORD": "Re-type password",
+    "SUBTITLE": "User",
+    "TITLE": "Detail",
+    "TITLEADD": "Add new account",
+    "TITLEEDIT": "Update account",
+    "TITLE_CREDENTIAL": "Login Informations",
+    "TITLE_ROLE": "Roles",
+    "TITLE_USER_INFO": "User Informations",
+    "USER_NAME": "User name",
+    "GENDER": "Gender",
+    "ADDRESS": "Address"
+  },
+  "VIEW": {
+    "SUBTITLE": "Admin",
+    "TITLE": "View"
+  },
+  "VIEW_ADD": {
+    "CODE": "Code",
+    "FROM_SQL": "From Sql",
+    "IS_ACTIVED": "Actived",
+    "MODULE": "Module",
+    "NAME": "Name",
+    "ORDER_SQL": "Order Sql",
+    "PLACEHOLDER_WIDTH": "Width",
+    "SELECT_SQL": "Select Sql",
+    "SUBTITLE": "View",
+    "TITLE": "Detail",
+    "VIEW_DETAIL": "View Details",
+    "VIEW_TITLE": "View Informations",
+    "VISIBLE": "Visible",
+    "WHERE_SQL": "Where Sql"
+  },
+  "WEBSITE_MENU": {
+    "BUTTON_ADD_CHILD": "Add",
+    "BUTTON_ADD_MENU": "Add Menu",
+    "BUTTON_DELETE_MENU": "Delete",
+    "BUTTON_EDIT_CHILD": "Edit",
+    "BUTTON_EDIT_MENU": "Edit",
+    "SUBTITLE": "WEBSITE",
+    "TITLE": "Menu",
+    "TITLE_ACTIONS": "Actions"
+  },
+  "WEBSITE_MENU_ADD": {
+    "BUTTON_ADD_LINK": "Add link",
+    "LABEL_TITLE": "Title",
+    "PLACEHOLDER_LINK_TARGET": "Target",
+    "PLACEHOLDER_LINK_TITLE": "Link name",
+    "PLACEHOLDER_LINK_URL": "Url",
+    "SUBTITLE": "MENU",
+    "TITLE": "Menu detail",
+    "TITLE_CODE": "Code",
+    "TITLE_LINKS": "Links"
+  },
+  "LANGUAGE": {
+    "TITLE": "Language Category",
+    "SUBTITLE": "Language",
+    "NAME": "Language Name",
+    "DESCRIPTION": "Description"
+  },
+  "LANGUAGE_ADD": {
+    "TITLEADD": "Add New Language",
+    "TITLE_LANGUAGE_INFO": "Language Information",
+    "TITLEEDIT": "Update Language Information",
+    "NAME": "Language Name",
+    "DESCRIPTION": "Description",
+    "SUBTITLE": "Language"
+  },
+  "AUTHOR": {
+    "TITLE": "Author Category",
+    "SUBTITLE": "Author",
+    "NAME": "Author Name",
+    "DESCRIPTION": "Description"
+  },
+  "AUTHOR_ADD": {
+    "TITLEADD": "Add New Author",
+    "TITLE_AUTHOR_INFO": "Author Information",
+    "TITLEEDIT": "Update Author Information",
+    "NAME": "Author Name",
+    "DESCRIPTION": "Description",
+    "SUBTITLE": "Author"
+  },
+  "PUBLISHER": {
+    "TITLE": "Publisher Category",
+    "SUBTITLE": "Publisher",
+    "NAME": "Publisher Name",
+    "DESCRIPTION": "Description"
+  },
+  "PUBLISHER_ADD": {
+    "TITLEADD": "Add New Publisher",
+    "TITLE_PUBLISHER_INFO": "Publisher Information",
+    "TITLEEDIT": "Update Publisher Information",
+    "NAME": "Publisher Name",
+    "DESCRIPTION": "Description",
+    "SUBTITLE": "Publisher"
+  },
+  "MEMBERGROUP": {
+    "TITLE": "Membergroup Category",
+    "SUBTITLE": "Membergroup",
+    "NAME": "MemberGroup Name",
+    "DESCRIPTION": "Description"
+  },
+  "MEMBERGROUP_ADD": {
+    "TITLEADD": "Add New Membergroup",
+    "TITLE_MEMBERGROUP_INFO": "Membergroup Information",
+    "TITLEEDIT": "Update Membergroup Information",
+    "NAME": "MemberGroup Name",
+    "DESCRIPTION": "Description",
+    "SUBTITLE": "Membergroup"
+  },
+  "MEMBER": {
+    "TITLE": "Member Category",
+    "SUBTITLE": "Member",
+    "NAME": "Member Name",
+    "PHONE": "Phone",
+    "MEMBERGROUP": "Member group",
+    "MEMBERCODE" : "Member Code"
+  },
+  "MEMBER_ADD": {
+    "TITLEADD": "Add New Member",
+    "TITLEEDIT": "Update Member Information",
+    "TITLE_MEMBER_INFO": "Member Information",
+    "ADDRESS": "Address",
+    "GENDER":"Gender"
+  },
+  "POLICY": {
+    "TITLE": "Manage Policy",
+    "SUBTITLE": "Policy",
+    "BOOKNUMBER": "Amount of book",
+    "NUMBERDUEDATE": "Number due date"
+  },
+
+  "POLICY_ADD": {
+    "TITLEADD":"Add New Policy",
+    "TITLEEDIT":"Edit Policy",
+    "TITLE_POLICY_INFO": "Policy Information"
+
+  },
+  "CATALOG": {
+    "TITLE": "Catalog Category",
+    "SUBTITLE": "Catalog",
+    "TITLE_CATALOG_INFO": "Catalog Information",
+    "NAME": "Catalog Name",
+    "DESCRIPTION": "Catalog Description"
+  },
+  "CATALOG_ADD": {
+    "TITLEADD": "Add New Catalog",
+    "NAME": "Catalog Name",
+    "DESCRIPTION": "Description",
+    "TITLEEDIT": "Update Catalog"
+  },
+  "RACK": {
+    "TITLE": "Rack Category",
+    "SUBTITLE": "Rack",
+    "NUMBER": "Rack Number",
+    "LOCATIONIDENTIFIER": "Location identifier"
+  },
+  "RACK_ADD": {
+    "TITLEADD": "Add New Book Position",
+    "NUMBER": "Rack Number",
+    "LOCATIONIDENTIFIER": "Location Identifier",
+    "TITLEEDIT": "Update Book Position",
+    "TITLE_RACK_INFO": "Rack Information"
+  },
+  "FORMAT": {
+    "TITLE": "Format Category",
+    "SUBTITLE": "Format",
+    "TITLE_FORMAT_INFO": "Format Information",
+    "NAME": "Format Name",
+    "DESCRIPTION": "Description"
+  },
+  "FORMAT_ADD": {
+    "TITLEADD": "Add New Format",
+    "NAME": "Format Name",
+    "DESCRIPTION": "Description",
+    "TITLEEDIT": "Update Format"
+  },
+  "BOOK": {
+    "SUBTITLE": "Book",
+    "TITLE": "Book Information",
+    "NAME": "Book Name",
+    "IMAGE": "Book Image",
+    "ISBN": "ISBN",
+    "LANGUAGE": "Language",
+    "NUMBERPAGES": "Number Pages",
+    "TITLE_CATEGORY_INFO": "Category Information",
+    "SUBJECT": "Summary"
+  },
+  "BOOK_ADD": {
+    "TITLEADD": "Add New Book",
+    "TITLEEDIT": "Update Book"
+  },
+  "BOOKITEM": {
+    "SUBTITLE": "Book Item",
+    "TITLE": "Book Item Information",
+    "NAME": "Name",
+    "STATUS": "Status",
+    "ISRAREBOOK": "Rare Book",
+    "ISREFERENCE": "Reference Book"
+  },
+  "BOOKITEM_ADD": {
+    "TITLEADD": "Add New Book Item",
+    "TITLEEDIT": "Update Book Item",
+    "BARCODE": "Barcode",
+    "REF": "Is Reference Book ?",
+    "RAREBOOK": "Is Rare Book ?",
+    "PRICE": "Price",
+    "PUBLISHDATE": "Publish Year"
+  },
+  "STATUS": {
+    "TITLE": "Status Category",
+    "SUBTITLE": "Status",
+    "NAME": "Status Name",
+    "DESCRIPTION": "Description"
+  },
+  "STATUS_ADD":{
+    "TITLEADD":"Add New Status",
+    "TITLEEDIT":"Update Status",
+    "TITLE_STATUS_INFO":"Status information"
+  }
+
+}

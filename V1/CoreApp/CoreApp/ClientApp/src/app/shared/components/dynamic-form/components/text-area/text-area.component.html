@@ -1,0 +1,10 @@
+<div class="form-group" [formGroup]="group">
+    <label translate>{{field.label}}</label>
+    <textarea class="form-control" [formControlName]="field.name"
+        [ngClass]="{ 'is-invalid': isSubmited && group.get(field.name).errors }">
+    </textarea>
+    <ng-container *ngFor="let validation of field.validations;" ngProjectAs="mat-error">
+        <small class="form-text text-muted invalid-tooltip" *ngIf="group.get(field.name).hasError(validation.name)"
+            translate>{{validation.message}}</small>
+    </ng-container>
+</div>

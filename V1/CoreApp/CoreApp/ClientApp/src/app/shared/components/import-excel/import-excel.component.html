@@ -1,0 +1,84 @@
+<div class="container">
+  <div class="title">Import data from Excel</div>
+
+  <a class="btn btn-sm btn-success mr-1" download target="_blank" href="https://vanlangunivn-my.sharepoint.com/:x:/g/personal/quoc_t176320_vanlanguni_vn/EbGl49Q3gytOmB_duugbkfsBG0FruGvq7UFb4DjwxXaBug?e=BjXnZA"><i
+      class="material-icons mr-1">get_app</i> <span translate>GRID_VIEW.BUTTON_DOWNLOADTEMPLATE</span></a>
+
+  <button class="btn-sm btn-danger btn mr-1">
+    <label style="margin-bottom: 0;">
+      <i class="material-icons mr-1">import_export</i>
+      <span translate>GRID_VIEW.BUTTON_IMPORTEXCEL</span>
+      <input hidden type="file" (change)="importExcel($event)" accept=".xlsx" #inputFile multiple="false">
+
+
+    </label>
+  </button>
+
+  <button class="btn btn-sm btn-info mr-1" (click)="return()"><i class="material-icons mr-1">keyboard_return</i> <span
+      translate>GRID_VIEW.BUTTON_BACK</span></button>
+
+  <hr>
+
+  <div class="data-excelfile">
+
+    <div class="total-record">
+      <span class="total">Total record: {{totalRecord ? totalRecord : 0}}</span>
+      <span class="total">Total record successful: {{totalRecordSuccess ? totalRecordSuccess : 0}}</span>
+    </div>
+
+    <p class="tablefail-name">Table list records fail</p>
+
+    <div class="table-responsive" *ngIf="isShowTableInvalid">
+      <table id="table" class="table table-striped table-bordered">
+        <tr>
+          <th>Barcode</th>
+          <th>Price</th>
+          <th>Publication Year</th>
+          <th>Status</th>
+          <th>Rack Number</th>
+          <th>Format</th>
+          <th>Book ISBN</th>
+          <th>Is Rare Book</th>
+          <th>Is Reference Book</th>
+        </tr>
+        <tr *ngFor="let item of dataExcelInvalid | paginate:{itemsPerPage: 10, currentPage: p}">
+          <td>
+            {{item?.barcode}}
+          </td>
+          <td>
+            {{item?.price}}
+          </td>
+          <td>
+            {{item?.publicationYear}}
+          </td>
+          <td>
+            {{item.status?.name}}
+          </td>
+          <td>
+            {{item.rack?.number}}
+          </td>
+          <td>
+            {{item.format?.name}}
+          </td>
+          <td>
+            {{item.book?.isbn}}
+          </td>
+          <td>
+            {{item?.isRareBook}}
+          </td>
+          <td>
+            {{item?.isReferenceOnly}}
+          </td>
+        </tr>
+
+      </table>
+
+    </div>
+
+
+
+
+    <pagination-controls (pageChange)="p = $event" *ngIf="isShowPaginationControl"></pagination-controls>
+  </div>
+
+</div>

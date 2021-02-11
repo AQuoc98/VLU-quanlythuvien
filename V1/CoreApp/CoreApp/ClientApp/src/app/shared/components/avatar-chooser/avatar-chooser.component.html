@@ -1,0 +1,21 @@
+<div class="avatar">
+    <div class="avatar-image">
+        <img [hidden]="!value" [src]="value">
+    </div>
+    <div class="avatar-control text-center">
+        <div class="btn-group btn-group-sm mr-2 ml-lg-auto" role="group" aria-label="Table row actions">
+            <button type="button" class="btn btn-outline-primary"
+                title="{{ 'AVATAR_CHOOSER.CHOOSE_FILE' | translate }}">
+                <input class="d-none" type="file" name="file" [id]="id" ng2FileSelect [uploader]="uploader"
+                    accept="image/">
+                <label class="m-0" [for]="id">
+                    <i class="material-icons">add_a_photo</i>
+                </label>
+            </button>
+            <button (click)="delete()" type="button" title="{{ 'AVATAR_CHOOSER.DELETE' | translate }}"
+                class="btn btn-outline-danger">
+                <i class="material-icons">delete</i>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,99 @@
+<app-tool-bar (saveEvent)="saveEvent()"></app-tool-bar>
+<div class="card card-small mb-3">
+    <div class="card-header">
+        <span translate>VIEW_ADD.VIEW_TITLE</span>
+    </div>
+    <div class="card-body">
+        <form [formGroup]="dataForm">
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <label translate>VIEW_ADD.CODE</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="code" [ngClass]="{ 'is-invalid': isSubmited && fControls.code.errors }">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label translate>VIEW_ADD.NAME</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="name" [ngClass]="{ 'is-invalid': isSubmited && fControls.name.errors }">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label translate>VIEW_ADD.MODULE</label>
+                        <select class="form-control form-control-sm" (change)="moduleChanged()" formControlName="moduleId"
+                            [ngClass]="{ 'is-invalid': isSubmited && fControls.moduleId.errors }">
+                            <option [ngValue]="module.id" *ngFor="let module of modules">{{module.name}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <label translate>VIEW_ADD.SELECT_SQL</label>
+                        <textarea class="form-control" formControlName="selectSql" [ngClass]="{ 'is-invalid': isSubmited && fControls.selectSql.errors }"></textarea>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <label translate>VIEW_ADD.FROM_SQL</label>
+                        <textarea class="form-control" formControlName="fromSql" [ngClass]="{ 'is-invalid': isSubmited && fControls.fromSql.errors }"></textarea>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <label translate>VIEW_ADD.WHERE_SQL</label>
+                        <textarea class="form-control" formControlName="whereSql" [ngClass]="{ 'is-invalid': isSubmited && fControls.whereSql.errors }"></textarea>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <label translate>VIEW_ADD.ORDER_SQL</label>
+                        <textarea class="form-control" formControlName="orderSql" [ngClass]="{ 'is-invalid': isSubmited && fControls.orderSql.errors }"></textarea>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="actived" formControlName="isActived">
+                            <label class="custom-control-label" for="actived" translate>VIEW_ADD.IS_ACTIVED</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="card card-small mb-3">
+    <div class="card-header">
+        <span translate>VIEW_ADD.VIEW_DETAIL</span>
+    </div>
+    <div class="card-body">
+        <bs-sortable [(ngModel)]="viewDetails" [itemTemplate]="itemTemplate" itemClass="sortable-item" itemActiveClass="sortable-item-active"
+            wrapperClass="sortable-wrapper"></bs-sortable>
+    </div>
+</div>
+<ng-template #itemTemplate let-item="item" let-index="index">
+    <div class="form-goup">
+        <div class="row">
+            <div class="col-5">
+                <label class="my-1 mr-2">{{showColName(item)}}</label>
+            </div>
+            <div class="col-3">
+                <input type="text" [(ngModel)]="item.initData.width" class="form-control form-control-sm my-1 mr-sm-2"
+                    placeholder="{{'VIEW_ADD.PLACEHOLDER_WIDTH' | translate}}">
+            </div>
+            <div class="col-2">
+                <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                    <input type="checkbox" [(ngModel)]="item.initData.visible" class="custom-control-input" id="{{item.id + '_Visible'}}">
+                    <label class="custom-control-label" for="{{item.id + '_Visible'}}" translate>VIEW_ADD.VISIBLE</label>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                    <input type="checkbox" [(ngModel)]="item.initData.isActived" class="custom-control-input" id="{{item.id + '_Actived'}}">
+                    <label class="custom-control-label" for="{{item.id + '_Actived'}}" translate>VIEW_ADD.IS_ACTIVED</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>

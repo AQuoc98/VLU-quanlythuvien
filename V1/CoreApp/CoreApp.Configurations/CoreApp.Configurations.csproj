@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.8.1" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.3.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="5.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CoreApp.Authentication\CoreApp.Authentication.csproj" />
+    <ProjectReference Include="..\CoreApp.Service\CoreApp.Service.csproj" />
+    <ProjectReference Include="..\CoreApp.Signalr\CoreApp.Signalr.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,53 @@
+<div class="page-header row no-gutters py-4" *ngIf="!isEdit">
+  <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+    <h3 class="page-title" translate>POLICY_ADD.TITLEADD</h3>
+  </div>
+</div>
+
+<div class="page-header row no-gutters py-4" *ngIf="isEdit">
+  <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+    <h3 class="page-title" translate>POLICY_ADD.TITLEEDIT</h3>
+  </div>
+</div>
+
+<app-tool-bar (saveEvent)="saveEvent()"></app-tool-bar>
+
+<div class="card card-small mb-3">
+  <div class="card-header">
+    <span translate>POLICY_ADD.TITLE_POLICY_INFO</span>
+  </div>
+  <div class="card-body">
+    <form [formGroup]="dataForm">
+      <div class="row">
+        <div class="col-6">
+          <div class="form-group">
+            <label translate>MEMBER.MEMBERGROUP</label>
+            <select class="form-control form-control-sm" formControlName="memberGroupId" required
+              [ngClass]="{ 'is-invalid': isSubmited && fControls.memberGroupId.errors }">
+              <option value="" selected disabled hidden>Choose Here</option>
+              <option [ngValue]="membergroup.id" *ngFor="let membergroup of membergroups">
+                {{membergroup.name}}</option>
+            </select>
+            <div *ngIf="isSubmited && fControls.memberGroupId.errors?.required" class="invalid-feedback">
+              <div>Please enter your membergroup</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="form-group">
+            <label translate>POLICY.BOOKNUMBER</label>
+            <input type="number" class="form-control form-control-sm" formControlName="bookNumber" placeholder="0">
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="form-group">
+            <label translate>POLICY.NUMBERDUEDATE</label>
+            <input type="number" class="form-control form-control-sm" formControlName="numberOfDueDate" placeholder="0">
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,70 @@
+<!-- <ng-container
+  *ngIf="dataTypeCode === dataTypes.Text || dataTypeCode === dataTypes.Select || dataTypeCode === dataTypes.MultiSelect || dataTypeCode === dataTypes.UniqueIdentifier">
+ <div>{{value}}</div>
+</ng-container> -->
+
+
+<ng-container *ngIf="dataTypeCode === dataTypes.Text">
+  {{value}}
+</ng-container>
+
+<ng-container *ngIf="dataTypeCode === dataTypes.Select">
+  <div>{{value}}</div>
+</ng-container>
+
+<ng-container *ngIf="dataTypeCode === dataTypes.MultiSelect">
+  <div>{{value}}</div>
+</ng-container>
+
+<ng-container *ngIf="dataTypeCode === dataTypes.UniqueIdentifier">
+  <div>{{value}}</div>
+</ng-container>
+
+
+<ng-container *ngIf="dataTypeCode === dataTypes.Html">
+  <div [innerHTML]="value | safe">
+  </div>
+</ng-container>
+
+<ng-container *ngIf="dataTypeCode === dataTypes.Checkbox">
+  <div class="text-center">
+    <label class="custom-control material-checkbox">
+      <input type="checkbox" class="material-control-input" [checked]="value">
+      <span class="material-control-indicator"></span>
+      <span class="material-control-description"></span>
+    </label>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="dataTypeCode === dataTypes.DateTime">
+  {{value | date:'yyyy/MM/dd'}}
+</ng-container>
+
+<ng-container *ngIf="dataTypeCode === dataTypes.Date || dataTypeCode === dataTypes.DateRange">
+  {{value | date}}
+</ng-container>
+
+<ng-container *ngIf="dataTypeCode === dataTypes.Time">
+  {{value}}
+</ng-container>
+
+<ng-container *ngIf="dataTypeCode === dataTypes.MultiText">
+  {{value | slice:0:100}}
+  <span *ngIf="value.length > 100">...</span>
+</ng-container>
+
+<ng-container *ngIf="dataTypeCode === dataTypes.Email">
+  {{value}}
+</ng-container>
+
+<ng-container *ngIf="dataTypeCode === dataTypes.Image">
+  <img [src]="value" class="img-thumbnail" >
+</ng-container>
+
+<ng-container *ngIf="dataTypeCode === dataTypes.Number">
+  {{value}}
+</ng-container>
+
+<ng-container *ngIf="dataTypeCode === dataTypes.Currency">
+  {{value | number}}
+</ng-container>
